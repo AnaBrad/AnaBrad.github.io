@@ -3,11 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Capitolul următor — coaching pentru femei aflate la un moment de răscruce</title>
-<meta name="description" content="Coaching 1:1 pentru femei aflate la un moment de răscruce. Un pachet de șase ședințe săptămânale. Prima discuție de cunoaștere e gratuită.">
-<meta property="og:title" content="Capitolul următor">
-<meta property="og:description" content="Coaching pentru femei aflate la un moment de răscruce.">
+<title>Capitolul următor — coaching pentru femei care își doresc mai mult de la viață</title>
+<meta name="description" content="Coaching individual pentru femei care își doresc mai mult de la viață. Un pachet de 6 ședințe săptămânale. Prima ședință de cunoaștere e gratuită. Se lansează pe 1 august 2026.">
+<meta name="author" content="Ana-Maria Brad">
+<link rel="canonical" href="https://anamariabrad.ro/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Capitolul următor">
+<meta property="og:url" content="https://anamariabrad.ro/">
+<meta property="og:title" content="Capitolul următor — coaching pentru femei">
+<meta property="og:description" content="Coaching pentru femei care își doresc mai mult de la viață. Prima ședință de cunoaștere e gratuită.">
+<meta property="og:image" content="https://anamariabrad.ro/assets/og-capitolul-urmator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capitolul următor — coaching pentru femei">
+<meta name="twitter:description" content="Coaching pentru femei care își doresc mai mult de la viață.">
+<meta name="twitter:image" content="https://anamariabrad.ro/assets/og-capitolul-urmator.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237A4E63'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23C89A5B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -87,6 +100,11 @@
   .tools-link{font-size:14px;color:var(--plum);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
   .tools-link:hover{color:var(--plum-deep)}
 
+  /* Announcement bar */
+  .announce{background:var(--plum);color:#fff;text-align:center;padding:12px 16px;font-weight:600;
+    font-size:.95rem;letter-spacing:.01em;display:flex;align-items:center;justify-content:center;gap:9px}
+  .announce::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ochre)}
+
   /* HERO */
   header.hero{padding:clamp(40px,8vh,90px) 0 clamp(48px,9vh,96px);text-align:center}
   header.hero .kicker{margin-bottom:22px;display:inline-block}
@@ -162,9 +180,23 @@
   footer a{color:var(--plum);text-decoration:none;border-bottom:1px solid var(--line)}
 
   .center-cta{text-align:center;margin-top:8px}
+
+  /* Waitlist */
+  .waitlist{max-width:30rem;margin:38px auto 0;text-align:center;border-top:1px solid var(--line);padding-top:30px}
+  .waitlist p{font-size:.95rem;opacity:.82;margin-bottom:14px}
+  .waitlist form{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .waitlist input{flex:1;min-width:210px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;
+    font-size:16px;font-family:inherit;background:#fff;color:var(--charcoal)}
+  .waitlist input:focus{outline:2px solid var(--plum);outline-offset:1px}
+  .waitlist .btn-sm{background:var(--plum);color:#fff;border:none;padding:14px 24px;border-radius:999px;
+    font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:background .2s ease}
+  .waitlist .btn-sm:hover{background:var(--plum-deep)}
+  .waitlist .ok{color:var(--plum-deep);font-weight:600;margin-top:6px}
 </style>
 </head>
 <body>
+
+<div class="announce">Se lansează pe 1 august 2026</div>
 
 <div class="wrap">
   <div class="topbar">
@@ -242,7 +274,7 @@
         <li>Pe parcursul a aproximativ 6 săptămâni</li>
         <li>Se poate plăti în două rate</li>
       </ul>
-      <p class="founder">Preț special pentru clientele care încep acum.</p>
+      <p class="founder">Preț special pentru clientele care încep la 1 august 2026.</p>
     </div>
   </div>
 </section>
@@ -299,6 +331,15 @@
     <h2>Dacă simți că acum e momentul</h2>
     <p>Ofer câteva locuri pentru clientele care vor să înceapă acum. Hai să ne cunoaștem — o jumătate de oră, fără nicio obligație.</p>
     <div class="center-cta"><a class="btn plum" href="https://calendly.com/annamaria-brad/sedinta-coaching">Hai să ne cunoaștem →</a></div>
+
+    <div class="waitlist">
+      <p>Nu ești gata încă? Lasă-mi adresa și te anunț când se deschid înscrierile, pe 1 august.</p>
+      <form id="wl">
+        <input id="wl-email" type="email" required placeholder="adresa ta de email" aria-label="Adresa ta de email">
+        <button class="btn-sm" type="submit">Anunță-mă</button>
+      </form>
+      <div class="ok" id="wl-ok" hidden>Gata, te anunț la lansare. 💛</div>
+    </div>
   </div>
 </section>
 
@@ -309,6 +350,35 @@
     <div class="small" style="margin-top:12px"><a href="https://anamariabrad.ro/instrumente-coaching/">Vezi și instrumentele de coaching →</a></div>
   </div>
 </footer>
+
+<script>
+  // Auto-schimbare la lansare (1 august 2026): scoate bara de anunț și
+  // schimbă linia din cardul de pachet. Previzualizare: adaugă ?postlaunch=1 la link.
+  (function () {
+    var launch = new Date(2026, 7, 1, 0, 0, 0); // luna 7 = august (0-indexed)
+    var preview = /[?&]postlaunch=1/.test(location.search);
+    if (preview || new Date() >= launch) {
+      var bar = document.querySelector('.announce');
+      if (bar) bar.remove();
+      var founder = document.querySelector('.pack .founder');
+      if (founder) founder.textContent = 'Preț special pentru primele cliente.';
+    }
+  })();
+
+  // Listă de așteptare (mecanism imediat prin email; se poate trece pe Google Form)
+  var wl = document.getElementById('wl');
+  if (wl) {
+    wl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('wl-email').value;
+      var subject = encodeURIComponent('Listă de așteptare — Capitolul următor');
+      var body = encodeURIComponent('Vreau să fiu anunțată la lansare.\n\nEmail: ' + email);
+      window.location.href = 'mailto:annamaria.brad@gmail.com?subject=' + subject + '&body=' + body;
+      wl.hidden = true;
+      document.getElementById('wl-ok').hidden = false;
+    });
+  }
+</script>
 
 </body>
 </html>
