@@ -188,8 +188,8 @@
   .waitlist input{flex:1;min-width:210px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;
     font-size:16px;font-family:inherit;background:#fff;color:var(--charcoal)}
   .waitlist input:focus{outline:2px solid var(--plum);outline-offset:1px}
-  .waitlist .btn-sm{background:var(--plum);color:#fff;border:none;padding:14px 24px;border-radius:999px;
-    font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:background .2s ease}
+  .waitlist .btn-sm{display:inline-block;background:var(--plum);color:#fff;border:none;padding:14px 26px;border-radius:999px;
+    font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;text-decoration:none;transition:background .2s ease}
   .waitlist .btn-sm:hover{background:var(--plum-deep)}
   .waitlist .ok{color:var(--plum-deep);font-weight:600;margin-top:6px}
 </style>
@@ -334,11 +334,7 @@
 
     <div class="waitlist">
       <p>Nu ești gata încă? Lasă-mi adresa și te anunț când se deschid înscrierile, pe 1 august.</p>
-      <form id="wl">
-        <input id="wl-email" type="email" required placeholder="adresa ta de email" aria-label="Adresa ta de email">
-        <button class="btn-sm" type="submit">Anunță-mă</button>
-      </form>
-      <div class="ok" id="wl-ok" hidden>Gata, te anunț la lansare. 💛</div>
+      <a class="btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSe46X_KWpzOQGysaItQsIoWFhH5wCv4MIt0dpH-mMmuxrc9_w/viewform" target="_blank" rel="noopener">Anunță-mă la lansare</a>
     </div>
   </div>
 </section>
@@ -364,20 +360,6 @@
       if (founder) founder.textContent = 'Preț special pentru primele cliente.';
     }
   })();
-
-  // Listă de așteptare (mecanism imediat prin email; se poate trece pe Google Form)
-  var wl = document.getElementById('wl');
-  if (wl) {
-    wl.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = document.getElementById('wl-email').value;
-      var subject = encodeURIComponent('Listă de așteptare — Capitolul următor');
-      var body = encodeURIComponent('Vreau să fiu anunțată la lansare.\n\nEmail: ' + email);
-      window.location.href = 'mailto:annamaria.brad@gmail.com?subject=' + subject + '&body=' + body;
-      wl.hidden = true;
-      document.getElementById('wl-ok').hidden = false;
-    });
-  }
 </script>
 
 </body>
