@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capitolul următor — coaching pentru femei aflate la un moment de răscruce</title>
+<meta name="description" content="Coaching 1:1 pentru femei aflate la un moment de răscruce. Un pachet de șase ședințe săptămânale. Prima discuție de cunoaștere e gratuită.">
+<meta property="og:title" content="Capitolul următor">
+<meta property="og:description" content="Coaching pentru femei aflate la un moment de răscruce.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#7A4E63;
+    --plum-deep:#5E3A4C;
+    --ochre:#C89A5B;
+    --ochre-deep:#B07E3F;
+    --cream:#FAF6F0;
+    --cream-2:#F3ECE1;
+    --charcoal:#2E2A28;
+    --line:rgba(46,42,40,.14);
+    --shadow:0 24px 60px -28px rgba(94,58,76,.35);
+    --maxw:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    background-image:
+      radial-gradient(120% 60% at 85% -5%, rgba(200,154,91,.20), transparent 60%),
+      radial-gradient(120% 60% at 0% 105%, rgba(122,78,99,.16), transparent 55%);
+    background-attachment:fixed;
+    color:var(--charcoal);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.7;
+    font-size:clamp(16px,1.05vw + 13px,18px);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    position:relative;
+  }
+  /* paper grain */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity:.05;mix-blend-mode:multiply;
+  }
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-.015em;line-height:1.08;color:var(--plum-deep)}
+  a{color:inherit}
+
+  /* Fade-in on load */
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .rise{opacity:0;animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.31s}.d4{animation-delay:.44s}.d5{animation-delay:.57s}
+  @media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1}}
+
+  /* Kicker + ornament */
+  .kicker{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ochre-deep);font-weight:600}
+  .ornament{display:flex;align-items:center;gap:14px;color:var(--ochre)}
+  .ornament::before,.ornament::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+  .ornament span{font-family:"Fraunces",serif;font-style:italic;font-size:1.1rem}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;
+    background:var(--ochre);color:#fff;font-family:"Instrument Sans",sans-serif;font-weight:600;font-size:1rem;
+    padding:16px 30px;border-radius:999px;text-decoration:none;
+    box-shadow:0 14px 30px -12px rgba(176,126,63,.7);
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  }
+  .btn:hover{transform:translateY(-2px);background:var(--ochre-deep);box-shadow:0 20px 38px -14px rgba(176,126,63,.75)}
+  .btn:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+  .btn.plum{background:var(--plum);box-shadow:0 14px 30px -12px rgba(122,78,99,.6)}
+  .btn.plum:hover{background:var(--plum-deep)}
+
+  /* Brand header — unificat cu instrumentele de coaching */
+  .topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:26px 0 8px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:38px;height:38px;border-radius:50%;background:var(--plum);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:19px}
+  .brand-name{font-weight:600;letter-spacing:.01em;color:var(--charcoal)}
+  .brand-name span{color:rgba(46,42,40,.55);font-weight:400}
+  .tools-link{font-size:14px;color:var(--plum);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .tools-link:hover{color:var(--plum-deep)}
+
+  /* HERO */
+  header.hero{padding:clamp(40px,8vh,90px) 0 clamp(48px,9vh,96px);text-align:center}
+  header.hero .kicker{margin-bottom:22px;display:inline-block}
+  header.hero h1{font-size:clamp(3.4rem,11vw,7rem);margin-bottom:.15em}
+  header.hero h1 em{font-style:italic;font-weight:400;color:var(--plum)}
+  .tagline{font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:clamp(1.15rem,3.2vw,1.6rem);color:var(--plum);margin-bottom:1.1em}
+  .lede{max-width:34ch;margin:0 auto 2em;color:var(--charcoal);opacity:.9}
+  header.hero .lede strong{font-weight:600;color:var(--plum-deep)}
+
+  section{padding:clamp(48px,8vh,86px) 0}
+  .eyebrow{margin-bottom:34px}
+  .eyebrow .kicker{display:block;margin-bottom:12px}
+  .eyebrow h2{font-size:clamp(1.9rem,5vw,2.9rem)}
+
+  /* Pentru cine e */
+  .fits{max-width:44rem;margin:0 auto;list-style:none;display:grid;gap:2px}
+  .fits li{position:relative;padding:20px 8px 20px 46px;border-bottom:1px solid var(--line);font-size:1.06rem}
+  .fits li:last-child{border-bottom:none}
+  .fits li::before{
+    content:"";position:absolute;left:8px;top:26px;width:16px;height:16px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,var(--ochre),var(--ochre-deep));
+  }
+
+  /* Cum functioneaza — chapters */
+  .steps{display:grid;gap:26px;max-width:46rem;margin:0 auto}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+    background:linear-gradient(180deg,#fff,var(--cream));border:1px solid var(--line);
+    border-radius:20px;padding:26px 28px;box-shadow:var(--shadow)}
+  .step .num{font-family:"Fraunces",serif;font-style:italic;font-weight:500;font-size:2.4rem;color:var(--ochre);line-height:1;min-width:1.4em}
+  .step h3{font-size:1.28rem;margin-bottom:.35em}
+  .step p{opacity:.9}
+
+  /* Pachetul */
+  .pack{max-width:40rem;margin:0 auto;background:var(--plum);color:#fff;border-radius:26px;
+    padding:clamp(32px,5vw,52px);box-shadow:0 40px 80px -30px rgba(94,58,76,.7);text-align:center;position:relative;overflow:hidden}
+  .pack::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(120% 90% at 80% -10%,rgba(200,154,91,.35),transparent 60%);pointer-events:none}
+  .pack .name{font-family:"Fraunces",serif;font-style:italic;font-size:1.5rem;margin-bottom:6px;color:#fff}
+  .pack .price{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(3rem,9vw,4.4rem);color:#fff;line-height:1;margin:.1em 0 .05em}
+  .pack .price small{font-size:1.1rem;font-weight:400;font-style:italic;opacity:.85}
+  .pack ul{list-style:none;display:grid;gap:12px;max-width:24rem;margin:26px auto 0;text-align:left}
+  .pack ul li{position:relative;padding-left:30px;opacity:.96}
+  .pack ul li::before{content:"";position:absolute;left:0;top:.55em;width:11px;height:11px;border-radius:50%;background:var(--ochre)}
+  .pack .founder{margin-top:22px;font-style:italic;font-family:"Fraunces",serif;font-size:1.05rem;color:#F3D9B6}
+
+  /* Despre mine */
+  .about{max-width:40rem;margin:0 auto;text-align:center}
+  .about .portrait{width:96px;height:96px;border-radius:50%;margin:0 auto 24px;
+    background:linear-gradient(140deg,var(--cream-2),var(--ochre));display:grid;place-items:center;
+    font-family:"Fraunces",serif;font-style:italic;font-size:2.2rem;color:#fff;box-shadow:var(--shadow)}
+  .about p{font-size:1.16rem}
+  .about .sig{font-family:"Fraunces",serif;font-style:italic;font-size:1.3rem;color:var(--plum);margin-top:1em}
+
+  /* FAQ */
+  .faq{max-width:44rem;margin:0 auto}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 4px;position:relative;
+    font-family:"Fraunces",serif;font-weight:500;font-size:1.16rem;color:var(--plum-deep)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    font-family:"Instrument Sans",sans-serif;font-size:1.6rem;color:var(--ochre);transition:transform .3s ease}
+  .faq details[open] summary::after{content:"–"}
+  .faq .ans{padding:0 4px 24px;opacity:.92;max-width:60ch}
+
+  /* Final CTA */
+  .final{text-align:center}
+  .final h2{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:.4em}
+  .final p{max-width:34ch;margin:0 auto 1.8em;opacity:.9}
+
+  footer{padding:56px 0 64px;border-top:1px solid var(--line);text-align:center;color:var(--charcoal)}
+  footer .wm{font-family:"Fraunces",serif;font-style:italic;font-size:1.4rem;color:var(--plum);margin-bottom:8px}
+  footer .small{font-size:.85rem;opacity:.65}
+  footer a{color:var(--plum);text-decoration:none;border-bottom:1px solid var(--line)}
+
+  .center-cta{text-align:center;margin-top:8px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div class="brand-name">Ana-Maria Brad <span>· coach</span></div>
+    </div>
+    <a class="tools-link" href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching →</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="rise d2" style="margin-top:8px">Capitolul <em>următor</em></h1>
+    <p class="tagline rise d3">Coaching pentru femei care își doresc mai mult de la viață.</p>
+    <p class="lede rise d4">Te reinventezi, o iei de la capăt sau cauți răspuns la întrebarea „ce urmează?". <strong>Nu trebuie să afli singură.</strong></p>
+    <div class="rise d5"><a class="btn" href="https://calendly.com/annamaria-brad/sedinta-coaching">Programează o ședință de cunoaștere gratuită</a></div>
+  </div>
+</header>
+
+<section id="pentru-cine">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Pentru cine e</span>
+      <h2>Poate te regăsești aici</h2>
+    </div>
+    <ul class="fits">
+      <li>Simți că s-a încheiat un capitol, dar nu știi ce urmează.</li>
+      <li>Vrei o schimbare — de carieră, de direcție, de ritm — dar ceva te ține pe loc.</li>
+      <li>Ai realizat multe, și totuși te întrebi „asta e tot?".</li>
+      <li>Vrei să începi ceva nou, dar ți-ar prinde bine cineva alături cât găsești direcția.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cum-functioneaza" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Cum funcționează</span>
+      <h2>Drumul, în trei pași</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">I</div>
+        <div>
+          <h3>Ședința de cunoaștere</h3>
+          <p>Gratuită, 30 de minute. Ne cunoaștem, îmi spui unde ești și vedem dacă ne potrivim. Fără nicio obligație.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">II</div>
+        <div>
+          <h3>Pachetul „Capitolul următor"</h3>
+          <p>Șase ședințe, câte una pe săptămână, timp de aproximativ șase săptămâni. Descoperim împreună unde ești acum, ce îți dorești să se schimbe și ce prim pas poți face.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">III</div>
+        <div>
+          <h3>Rezultatul</h3>
+          <p>Pleci cu mai multă claritate și cu pași concreți — nu cu o listă de sfaturi, ci cu deciziile tale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pachet">
+  <div class="wrap">
+    <div class="pack">
+      <div class="name">Pachetul „Capitolul următor"</div>
+      <div class="price">1.500 <small>lei</small></div>
+      <ul>
+        <li>6 ședințe de câte 60 de minute, săptămânal</li>
+        <li>Pe parcursul a aproximativ 6 săptămâni</li>
+        <li>Se poate plăti în două rate</li>
+      </ul>
+      <p class="founder">Preț special pentru clientele care încep acum.</p>
+    </div>
+  </div>
+</section>
+
+<section id="despre" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="about">
+      <div class="portrait">A</div>
+      <span class="kicker">Despre mine</span>
+      <p style="margin-top:16px">Știu cum este să te simți pierdută chiar și atunci când, din exterior, pare că totul este în regulă. Am traversat propriile mele frământări, întrebări fără răspuns și momente în care nu mai știam încotro să merg. Tocmai de aceea sunt aici: să însoțesc femeile care aleg să își regăsească vocea, curajul și să înceapă să scrie un nou capitol al vieții lor.</p>
+      <p class="sig">Ana-Maria Brad</p>
+    </div>
+  </div>
+</section>
+
+<section id="intrebari">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Întrebări frecvente</span>
+      <h2>Ce te-ai putea întreba</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>E prea târziu pentru mine?</summary>
+        <div class="ans">Nu. Fiecare dintre noi are propriul ritm. Nu există un moment perfect pentru schimbare, ci doar momentul în care simți că nu mai vrei să rămâi acolo unde ești. Iar acest moment poate fi începutul unui nou capitol.</div>
+      </details>
+      <details>
+        <summary>Ce se întâmplă, de fapt, într-o ședință?</summary>
+        <div class="ans">Discutăm. Eu pun întrebări, tu te auzi gândind cu voce tare, iar împreună clarificăm ce e important pentru tine. Nu îți dau soluții de-a gata — te ajut să le găsești pe ale tale, cele în care chiar crezi.</div>
+      </details>
+      <details>
+        <summary>Cu ce e diferit coaching-ul față de terapie sau de un sfat de la o prietenă?</summary>
+        <div class="ans">Terapia se uită la traumele din trecut, la vindecare. O prietenă îți spune ce ar face ea. Coaching-ul pornește de unde ești acum și privește înainte: ce vrei, ce te ține pe loc și ce pas poți face. Un spațiu care oferă siguranță, fără presiune.</div>
+      </details>
+      <details>
+        <summary>Ce se întâmplă în ședința de cunoaștere gratuită?</summary>
+        <div class="ans">E o discuție de o jumătate de oră în care ne cunoaștem. Îmi spui ce te frământă, îți spun cum lucrez și vedem dacă ne potrivim. Nu e o ședință de coaching și nu ai nimic de pregătit — doar vino așa cum ești.</div>
+      </details>
+      <details>
+        <summary>Dacă simt că nu e pentru mine?</summary>
+        <div class="ans">E în regulă. De asta există ședința de cunoaștere — ca să simți, înainte de orice, dacă ne potrivim. Pornim la drum împreună doar dacă tu vrei.</div>
+      </details>
+      <details>
+        <summary>Cum plătesc?</summary>
+        <div class="ans">Pachetul e 1.500 de lei și se poate plăti în două rate — jumătate la început, jumătate la mijlocul drumului. Îți spun toți pașii la ședința de cunoaștere.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="invitatie" class="final" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="ornament" style="margin-bottom:28px"><span>✦</span></div>
+    <h2>Dacă simți că acum e momentul</h2>
+    <p>Ofer câteva locuri pentru clientele care vor să înceapă acum. Hai să ne cunoaștem — o jumătate de oră, fără nicio obligație.</p>
+    <div class="center-cta"><a class="btn plum" href="https://calendly.com/annamaria-brad/sedinta-coaching">Hai să ne cunoaștem →</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="wm">Capitolul următor</div>
+    <div class="small">Ana-Maria Brad · Coaching pentru femei aflate la un moment de răscruce · online și în Iași</div>
+    <div class="small" style="margin-top:12px"><a href="https://anamariabrad.ro/instrumente-coaching/">Vezi și instrumentele de coaching →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
