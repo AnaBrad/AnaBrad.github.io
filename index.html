@@ -30,6 +30,8 @@
   "url": "https://anamariabrad.ro/",
   "image": "https://anamariabrad.ro/assets/og-capitolul-urmator.png",
   "serviceType": "Coaching",
+  "telephone": "+40726473039",
+  "email": "ana@anamariabrad.ro",
   "areaServed": ["Iași", "România", "Online"],
   "availableLanguage": "ro",
   "provider": {
@@ -214,6 +216,21 @@
     font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;text-decoration:none;transition:background .2s ease}
   .waitlist .btn-sm:hover{background:var(--plum-deep)}
   .waitlist .ok{color:var(--plum-deep);font-weight:600;margin-top:6px}
+
+  /* Contact */
+  .contact-intro{max-width:38ch;margin:0 auto 36px;text-align:center;opacity:.9}
+  .contact-methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:46rem;margin:0 auto}
+  .contact-card{display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;
+    background:linear-gradient(180deg,#fff,var(--cream));border:1px solid var(--line);border-radius:20px;
+    padding:30px 22px;text-decoration:none;color:var(--charcoal);box-shadow:var(--shadow);
+    transition:transform .25s ease,box-shadow .25s ease}
+  .contact-card:hover{transform:translateY(-3px);box-shadow:0 30px 60px -28px rgba(94,58,76,.4)}
+  .contact-card:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+  .contact-card .ci{width:48px;height:48px;border-radius:50%;background:var(--cream-2);
+    display:grid;place-items:center;margin-bottom:8px;color:var(--plum)}
+  .contact-card .ci svg{width:23px;height:23px}
+  .contact-card .cl{font-family:"Fraunces",serif;font-weight:500;font-size:1.12rem;color:var(--plum-deep)}
+  .contact-card .cv{font-size:.95rem;opacity:.82}
 </style>
 </head>
 <body>
@@ -231,6 +248,7 @@
         <a href="/" aria-current="page">Acasă</a>
         <a href="/blog/">Blog</a>
         <a href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </div>
@@ -364,6 +382,34 @@
       <p>Vrei să te mai gândești? Lasă-mi adresa și îți rezerv eu un loc.</p>
       <a class="btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSe46X_KWpzOQGysaItQsIoWFhH5wCv4MIt0dpH-mMmuxrc9_w/viewform" target="_blank" rel="noopener">Păstrează-mi un loc</a>
     </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Contact</span>
+      <h2>Hai să vorbim</h2>
+    </div>
+    <p class="contact-intro">Scrie-mi sau sună-mă, cum îți e mai ușor. Îți răspund cât de repede pot.</p>
+    <div class="contact-methods">
+      <a class="contact-card" href="mailto:ana@anamariabrad.ro">
+        <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <span class="cl">Email</span>
+        <span class="cv">ana@anamariabrad.ro</span>
+      </a>
+      <a class="contact-card" href="tel:+40726473039">
+        <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+        <span class="cl">Telefon</span>
+        <span class="cv">0726 473 039</span>
+      </a>
+      <a class="contact-card" href="https://wa.me/40726473039" target="_blank" rel="noopener">
+        <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 5 8.9a4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c2 .8 2 .5 2.4.5a2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.2Z"/></svg></span>
+        <span class="cl">WhatsApp</span>
+        <span class="cv">Scrie-mi un mesaj</span>
+      </a>
+    </div>
+    <div class="center-cta" style="margin-top:36px"><a class="btn" href="https://calendly.com/annamaria-brad/sedinta-coaching">Programează o ședință gratuită</a></div>
   </div>
 </section>
 
