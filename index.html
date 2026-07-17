@@ -231,6 +231,17 @@
   .contact-card .ci svg{width:23px;height:23px}
   .contact-card .cl{font-family:"Fraunces",serif;font-weight:500;font-size:1.12rem;color:var(--plum-deep)}
   .contact-card .cv{font-size:.95rem;opacity:.82}
+
+  /* Testimoniale */
+  .testimonials{max-width:56rem;margin:0 auto;display:grid;gap:20px;grid-template-columns:1fr 1fr}
+  @media(max-width:680px){.testimonials{grid-template-columns:1fr;max-width:40rem}}
+  .tstm{position:relative;background:linear-gradient(180deg,#fff,var(--cream));border:1px solid var(--line);
+    border-radius:20px;padding:26px 28px 24px;box-shadow:var(--shadow);text-align:left;margin:0}
+  .tstm .mark{font-family:"Fraunces",serif;font-size:3.2rem;line-height:.4;color:var(--ochre);opacity:.55;display:block;margin-bottom:14px}
+  .tstm blockquote{font-family:"Fraunces",serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.15rem,2.2vw,1.42rem);line-height:1.4;color:var(--plum-deep)}
+  .tstm figcaption{margin-top:18px;font-family:"Instrument Sans",sans-serif;font-size:.9rem;
+    letter-spacing:.03em;color:var(--ochre-deep);font-weight:600}
 </style>
 </head>
 <body>
@@ -332,6 +343,26 @@
       <span class="kicker">Despre mine</span>
       <p style="margin-top:16px">Știu cum este să te simți pierdută chiar și atunci când, din exterior, pare că totul este în regulă. Am traversat propriile mele frământări, întrebări fără răspuns și momente în care nu mai știam încotro să merg. Tocmai de aceea sunt aici: să însoțesc femeile care aleg să își regăsească vocea, curajul și să înceapă să scrie un nou capitol al vieții lor.</p>
       <p class="sig">Ana-Maria Brad</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimoniale">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Ce spun clientele</span>
+    </div>
+    <div class="testimonials">
+      <figure class="tstm">
+        <span class="mark" aria-hidden="true">&#8220;</span>
+        <blockquote>Am avut nevoie de ce mi-ai dăruit. În singurătate, fără un sistem de referință, pierzi din direcție.</blockquote>
+        <figcaption>I.</figcaption>
+      </figure>
+      <figure class="tstm">
+        <span class="mark" aria-hidden="true">&#8220;</span>
+        <blockquote>În coaching-ul cu tine am avut momente de „aha" care mi-au schimbat viziunea și m-au scos din „roata șoricelului" în care mă aflam.</blockquote>
+        <figcaption>I.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
