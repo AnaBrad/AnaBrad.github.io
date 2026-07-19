@@ -125,8 +125,10 @@
   .mainnav a{font-size:15px;color:var(--charcoal);text-decoration:none;opacity:.82;transition:opacity .2s ease,color .2s ease}
   .mainnav a:hover{opacity:1;color:var(--plum)}
   .mainnav a[aria-current="page"]{color:var(--plum-deep);opacity:1;font-weight:600;border-bottom:2px solid var(--ochre);padding-bottom:3px}
-  .mainnav a.langsw{border-radius:999px;padding:5px 16px;background:var(--plum);color:#fff;font-weight:600;opacity:1}
-  .mainnav a.langsw:hover{background:var(--plum-deep);color:#fff}
+  .mainnav .lang-toggle{display:flex;gap:4px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .mainnav .lang-toggle a{padding:5px 13px;border-radius:999px;font-size:14px;font-weight:500;opacity:1;color:rgba(46,42,40,.7);border-bottom:none}
+  .mainnav .lang-toggle a:hover{color:var(--plum)}
+  .mainnav .lang-toggle a[aria-current="page"],.mainnav .lang-toggle a[aria-current="page"]:hover{font-weight:600;background:var(--plum);color:#fff;border-bottom:none;padding-bottom:5px}
 
   /* Announcement bar */
   .announce{background:var(--plum);color:#fff;text-align:center;padding:12px 16px;font-weight:600;
@@ -265,7 +267,7 @@
         <a href="/blog/">Blog</a>
         <a href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching</a>
         <a href="#contact">Contact</a>
-        <a class="langsw" href="/en/" lang="en" title="English version">EN</a>
+        <span class="lang-toggle" role="navigation" aria-label="Limbă"><a href="/" lang="ro" aria-current="page">Română</a><a href="/en/" lang="en">English</a></span>
       </nav>
     </div>
   </div>

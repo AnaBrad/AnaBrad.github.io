@@ -71,8 +71,10 @@
 
   article{padding:40px 0 20px}
   .back{font-size:14px;color:var(--ochre-deep);text-decoration:none;font-weight:600}
-  .lang{float:right;font-size:14px;color:#fff;text-decoration:none;font-weight:600;border-radius:999px;padding:5px 16px;background:var(--plum)}
-  .lang:hover{background:var(--plum-deep)}
+  .nav .lang-toggle{display:flex;gap:4px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .nav .lang-toggle a{padding:5px 13px;border-radius:999px;font-size:14px;font-weight:500;opacity:1;color:rgba(46,42,40,.7);border-bottom:none}
+  .nav .lang-toggle a:hover{color:var(--plum)}
+  .nav .lang-toggle a[aria-current="page"],.nav .lang-toggle a[aria-current="page"]:hover{font-weight:600;background:var(--plum);color:#fff;border-bottom:none;padding-bottom:5px}
   h1{font-family:"Fraunces",Georgia,serif;font-weight:500;color:var(--plum-deep);font-size:clamp(2rem,5.5vw,3rem);line-height:1.1;letter-spacing:-.015em;margin:18px 0 20px}
   .motto{font-style:italic;opacity:.9;border-left:3px solid var(--ochre);padding-left:20px;margin:0 0 34px;font-size:1.08rem}
   article p{margin-bottom:22px}
@@ -101,11 +103,11 @@
       <a href="/">Acasă</a>
       <a href="/blog/" aria-current="page">Blog</a>
       <a href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching</a>
+      <span class="lang-toggle" role="navigation" aria-label="Limbă"><a href="/blog/cum-am-ajuns-sa-creez-spatiul.html" lang="ro" aria-current="page">Română</a><a href="/blog/en/how-i-came-to-create-the-space.html" lang="en">English</a></span>
     </nav>
   </div>
 
   <article>
-    <a class="lang" href="/blog/en/how-i-came-to-create-the-space.html">Read in English</a>
     <a class="back" href="/blog/">← Blog</a>
     <h1>Cum am ajuns să creez spațiul de care cândva aveam și eu nevoie</h1>
 
