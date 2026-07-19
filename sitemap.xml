@@ -58,6 +58,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://anamariabrad.ro/blog/en/motivation-that-lasts.html"/>
   </url>
   <url>
+    <loc>https://anamariabrad.ro/instrumente-coaching/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anamariabrad.ro/instrumente-coaching/en/"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/instrumente-coaching/en/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anamariabrad.ro/instrumente-coaching/en/"/>
+  </url>
+  <url>
     <loc>https://anamariabrad.ro/confidentialitate.html</loc>
     <lastmod>2026-07-19</lastmod>
     <priority>0.3</priority>
