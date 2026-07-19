@@ -6,19 +6,20 @@
   --plum-deep: #5E3A4C;
   --ochre: #C89A5B;
   --ochre-deep: #B07E3F;
+  --ochre-text: #96662A;
   --cream: #FAF6F0;
   --cream-2: #F3ECE1;
   --charcoal: #2E2A28;
-  --muted: rgba(46, 42, 40, 0.62);
-  --muted-soft: rgba(46, 42, 40, 0.5);
+  --muted: rgba(46, 42, 40, 0.7);
+  --muted-soft: rgba(46, 42, 40, 0.62);
   --line: rgba(46, 42, 40, 0.14);
   --surface: rgba(255, 255, 255, 0.72);
 
   /* Category accents, kept within the warm plum/ochre family */
   --c-adults: #7A4E63;   --t-adults: rgba(122, 78, 99, 0.13);
-  --c-teens:  #B07E3F;   --t-teens:  rgba(176, 126, 63, 0.16);
+  --c-teens:  #96662A;   --t-teens:  rgba(176, 126, 63, 0.16);
   --c-teams:  #5E3A4C;   --t-teams:  rgba(94, 58, 76, 0.13);
-  --c-authors:#C89A5B;   --t-authors:rgba(200, 154, 91, 0.18);
+  --c-authors:#96662A;   --t-authors:rgba(200, 154, 91, 0.18);
 }
 
 * { box-sizing: border-box; }
@@ -130,7 +131,7 @@ a { color: inherit; text-decoration: none; }
 .hero h1 em {
   font-style: italic;
   font-weight: 500;
-  color: var(--ochre-deep);
+  color: var(--ochre-text);
 }
 .hero p {
   max-width: 580px;

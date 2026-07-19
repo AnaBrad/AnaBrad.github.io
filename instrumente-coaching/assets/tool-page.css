@@ -13,14 +13,14 @@
   --surface: rgba(255, 255, 255, 0.72);
   --ink: #2E2A28;
   --ink-soft: #564b52;
-  --ink-mute: #7b7069;
+  --ink-mute: #6E645D;
   --radius: 12px;
   --radius-lg: 22px;
 
   /* Aliases used by the Personal Values pages */
   --card: rgba(255, 255, 255, 0.72);
   --ink-2: #564b52;
-  --muted: #7b7069;
+  --muted: #6E645D;
   --soft: rgba(46, 42, 40, 0.14);
   --line: rgba(46, 42, 40, 0.14);
   --paper-2: #F3ECE1;
