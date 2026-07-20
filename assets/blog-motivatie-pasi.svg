@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340" role="img" preserveAspectRatio="xMidYMid meet">
+<title>Motivatie construita pas cu pas</title>
+<desc>Cinci trepte aurii urca spre un soare cald, iar o silueta pruna le urca — motivatia construita pas cu pas.</desc>
+<rect x="0" y="0" width="680" height="340" rx="16" fill="#FAF6F0"/>
+<circle cx="556" cy="96" r="46" fill="#EFE3CF"/>
+<circle cx="556" cy="96" r="30" fill="#C89A5B"/>
+<g stroke="#C89A5B" stroke-width="3" stroke-linecap="round">
+<line x1="556" y1="30" x2="556" y2="42"/>
+<line x1="612" y1="96" x2="624" y2="96"/>
+<line x1="600" y1="52" x2="609" y2="43"/>
+<line x1="600" y1="140" x2="609" y2="149"/>
+</g>
+<g>
+<rect x="118" y="252" width="72" height="46" fill="#C89A5B"/>
+<rect x="118" y="252" width="72" height="7" fill="#D9B478"/>
+<rect x="202" y="222" width="72" height="76" fill="#C89A5B"/>
+<rect x="202" y="222" width="72" height="7" fill="#D9B478"/>
+<rect x="286" y="192" width="72" height="106" fill="#B07E3F"/>
+<rect x="286" y="192" width="72" height="7" fill="#C89A5B"/>
+<rect x="370" y="162" width="72" height="136" fill="#B07E3F"/>
+<rect x="370" y="162" width="72" height="7" fill="#C89A5B"/>
+<rect x="454" y="126" width="72" height="172" fill="#96662A"/>
+<rect x="454" y="126" width="72" height="7" fill="#B07E3F"/>
+</g>
+<g fill="#7A4E63">
+<circle cx="316" cy="150" r="11"/>
+<path d="M 316 162 Q 308 180 306 196 L 300 196 Q 302 176 308 164 Z"/>
+<path d="M 316 162 Q 326 176 332 192 L 326 194 Q 320 178 312 166 Z"/>
+<path d="M 313 168 L 300 150 L 305 146 L 318 162 Z"/>
+<path d="M 319 168 L 336 156 L 340 161 L 323 174 Z"/>
+</g>
+<circle cx="302" cy="147" r="4" fill="#7A4E63"/>
+</svg>
