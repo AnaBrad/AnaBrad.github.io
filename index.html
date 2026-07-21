@@ -182,9 +182,9 @@
 
   /* Despre mine */
   .about{max-width:40rem;margin:0 auto;text-align:center}
-  .about .portrait{width:96px;height:96px;border-radius:50%;margin:0 auto 24px;
-    background:linear-gradient(140deg,var(--cream-2),var(--ochre));display:grid;place-items:center;
-    font-family:"Fraunces",serif;font-style:italic;font-size:2.2rem;color:#fff;box-shadow:var(--shadow)}
+  .about .portrait{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;
+    overflow:hidden;box-shadow:var(--shadow);outline:2px solid var(--ochre);outline-offset:5px}
+  .about .portrait img{width:100%;height:100%;object-fit:cover;display:block}
   .about p{font-size:1.16rem}
   .about .sig{font-family:"Fraunces",serif;font-style:italic;font-size:1.3rem;color:var(--plum);margin-top:1em}
 
@@ -350,7 +350,7 @@
 <section id="despre" style="background:var(--cream-2)">
   <div class="wrap">
     <div class="about">
-      <div class="portrait">A</div>
+      <div class="portrait"><img src="/assets/ana-portret.jpg" alt="Ana-Maria Brad, coach" width="150" height="150"></div>
       <span class="kicker">Despre mine</span>
       <p style="margin-top:16px">Știu cum este să te simți pierdută chiar și atunci când, din exterior, pare că totul este în regulă. Am traversat propriile mele frământări, întrebări fără răspuns și momente în care nu mai știam încotro să merg. Tocmai de aceea sunt aici: să însoțesc femeile care aleg să își regăsească vocea, curajul și să înceapă să scrie un nou capitol al vieții lor.</p>
       <p class="sig">Ana-Maria Brad</p>
