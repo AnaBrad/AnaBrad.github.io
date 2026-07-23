@@ -36,7 +36,17 @@
     background-image:radial-gradient(120% 50% at 90% -5%, rgba(200,154,91,.16), transparent 60%);
     background-attachment:fixed;color:var(--charcoal);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.7;font-size:clamp(16px,1.05vw + 13px,18px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
   .wrap{max-width:46rem;margin:0 auto;padding:0 22px}
-  .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:0 -22px;padding:12px 22px;background:rgba(250,246,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .siteheader{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .siteheader-inner{max-width:64rem;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+  .topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 0}
+  .mainnav{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+  .mainnav a{font-size:15px;color:var(--charcoal);text-decoration:none;opacity:.82;transition:opacity .2s ease,color .2s ease}
+  .mainnav a:hover{opacity:1;color:var(--plum)}
+  .mainnav a[aria-current="page"]{color:var(--plum-deep);opacity:1;font-weight:600;border-bottom:2px solid var(--ochre);padding-bottom:3px}
+  .mainnav .lang-toggle{display:flex;gap:4px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .mainnav .lang-toggle a{padding:5px 13px;border-radius:999px;font-size:14px;font-weight:500;opacity:1;color:rgba(46,42,40,.7);border-bottom:none}
+  .mainnav .lang-toggle a:hover{color:var(--plum)}
+  .mainnav .lang-toggle a[aria-current="page"],.mainnav .lang-toggle a[aria-current="page"]:hover{font-weight:600;background:var(--plum);color:#fff;border-bottom:none;padding-bottom:5px}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
   .brand-mark{width:38px;height:38px;border-radius:50%;background:var(--plum);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:19px}
   .brand-name{font-weight:600;color:var(--charcoal)}
@@ -71,20 +81,24 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
 </head>
 <body>
-<div class="wrap">
-  <div class="topbar">
-    <a class="brand" href="/">
-      <div class="brand-mark" aria-hidden="true">A</div>
-      <div class="brand-name">Ana-Maria Brad <span>· coach</span></div>
-    </a>
-    <nav class="nav">
-      <a href="/">Acasă</a>
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching</a>
-      <span class="lang-toggle" role="navigation" aria-label="Limbă"><a href="/blog/" lang="ro" aria-current="page" data-umami-event="lang-switch" data-umami-event-to="ro">Română</a><a href="/blog/en/" lang="en" data-umami-event="lang-switch" data-umami-event-to="en">English</a></span>
-    </nav>
+<div class="siteheader">
+  <div class="siteheader-inner">
+    <div class="topbar">
+      <a class="brand" href="/">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div class="brand-name">Ana-Maria Brad <span>· coach</span></div>
+      </a>
+      <nav class="mainnav">
+        <a href="/">Acasă</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="https://anamariabrad.ro/instrumente-coaching/">Instrumente de coaching</a>
+        <a href="/#contact">Contact</a>
+        <span class="lang-toggle" role="navigation" aria-label="Limbă"><a href="/blog/" lang="ro" aria-current="page" data-umami-event="lang-switch" data-umami-event-to="ro">Română</a><a href="/blog/en/" lang="en" data-umami-event="lang-switch" data-umami-event-to="en">English</a></span>
+      </nav>
+    </div>
   </div>
-
+</div>
+<div class="wrap">
   <main>
   <header class="blog-h">
     <div class="k">Blog</div>
