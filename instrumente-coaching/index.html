@@ -79,6 +79,7 @@
 </script>
 </head>
 <body>
+<div class="announce">Se lansează pe 1 septembrie 2026</div>
 <div class="siteheader">
   <div class="siteheader-inner">
     <header class="topbar">
@@ -395,5 +396,14 @@
 })();
 </script>
 
+<script>
+  (function () {
+    var launch = new Date(2026, 8, 1, 0, 0, 0);
+    if (/[?&]postlaunch=1/.test(location.search) || new Date() >= launch) {
+      var bar = document.querySelector('.announce');
+      if (bar) bar.remove();
+    }
+  })();
+</script>
 </body>
 </html>

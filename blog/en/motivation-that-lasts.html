@@ -48,6 +48,8 @@
     background-attachment:fixed;
     color:var(--charcoal);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.8;font-size:clamp(16px,1.05vw + 13px,18px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
   .wrap{max-width:44rem;margin:0 auto;padding:0 22px}
+  .announce{background:var(--plum);color:#fff;text-align:center;padding:12px 16px;font-weight:600;font-size:.95rem;letter-spacing:.01em;display:flex;align-items:center;justify-content:center;gap:9px}
+  .announce::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ochre)}
   .siteheader{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .siteheader-inner{max-width:64rem;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
   .topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 0}
@@ -96,6 +98,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
 </head>
 <body>
+<div class="announce">Launching on September 1, 2026</div>
 <div class="siteheader">
   <div class="siteheader-inner">
     <div class="topbar">
@@ -240,5 +243,14 @@
     <div class="small" style="margin-top:10px">© 2026 Ana-Maria Brad. All rights reserved.</div>
   </div>
 </footer>
+<script>
+  (function () {
+    var launch = new Date(2026, 8, 1, 0, 0, 0);
+    if (/[?&]postlaunch=1/.test(location.search) || new Date() >= launch) {
+      var bar = document.querySelector('.announce');
+      if (bar) bar.remove();
+    }
+  })();
+</script>
 </body>
 </html>
