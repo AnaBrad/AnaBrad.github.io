@@ -264,6 +264,15 @@
     <loc>https://anamariabrad.ro/instrumente-coaching/modelul-oskar.html</loc>
     <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/modelul-oskar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anamariabrad.ro/instrumente-coaching/en/oskar-model.html"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/instrumente-coaching/en/oskar-model.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/modelul-oskar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anamariabrad.ro/instrumente-coaching/en/oskar-model.html"/>
   </url>
   <url>
     <loc>https://anamariabrad.ro/instrumente-coaching/en/spin-model.html</loc>
