@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pagina nu a fost găsită — Ana-Maria Brad</title>
+<script>
+// Sectiunile in engleza au fost eliminate (site RO-only). Orice link vechi /en/
+// duce la echivalentul romanesc, ca sa nu ajungi intr-un capat mort.
+(function () {
+  var p = location.pathname;
+  var to = null;
+  if (p.indexOf("/instrumente-coaching/en/") === 0) to = "/instrumente-coaching/";
+  else if (p.indexOf("/blog/en/") === 0) to = "/blog/";
+  else if (p.indexOf("/en/") === 0) to = "/";
+  if (to) location.replace(to);
+})();
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    font-family:-apple-system,'Segoe UI',Arial,sans-serif;background:#faf6ec;color:#43352a;text-align:center;padding:24px}
+  .box{max-width:420px}
+  h1{font-size:52px;margin:0 0 8px;font-weight:400}
+  p{line-height:1.6;color:#6f6152}
+  a{display:inline-block;margin-top:16px;padding:12px 22px;border-radius:999px;
+    background:#7A4E63;color:#fff;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>404</h1>
+  <p>Pagina căutată nu există sau s-a mutat.</p>
+  <a href="/">Înapoi la pagina principală</a>
+</div>
+</body>
+</html>
