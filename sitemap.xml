@@ -9,9 +9,15 @@
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/blog/tipare-comportamentale.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/tipare-comportamentale.html"/>
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/cum-alegi-un-coach.html</loc>
