@@ -9,9 +9,15 @@
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/blog/decizia-e-a-ta.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/decizia-e-a-ta.html"/>
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/dincolo-de-zona-de-confort.html</loc>
