@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Capitolul următor — coaching pentru femei care își doresc mai mult de la viață</title>
-<meta name="description" content="Coaching individual pentru femei care își doresc mai mult de la viață. Un pachet de 6 ședințe, câte una pe săptămână. Prima ședință de cunoaștere e gratuită. Se lansează pe 1 septembrie 2026.">
+<meta name="description" content="Coaching individual pentru femei care își doresc mai mult de la viață. Un pachet de 6 ședințe, câte una pe săptămână. Prima ședință de cunoaștere e gratuită.">
 <meta name="author" content="Ana-Maria Brad">
 <link rel="canonical" href="https://anamariabrad.ro/">
 <link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/">
@@ -289,7 +289,6 @@
 </head>
 <body>
 
-<div class="announce">Se lansează pe 1 septembrie 2026</div>
 
 <div class="siteheader">
   <div class="wrap">
@@ -376,7 +375,7 @@
         <li>Câte o ședință pe săptămână, timp de 6 săptămâni</li>
         <li>Plată integrală sau în 4 rate, de câte 375 lei</li>
       </ul>
-      <p class="founder">Preț special pentru clientele care încep programul la 1 septembrie 2026.</p>
+      <p class="founder">Preț special pentru primele cliente.</p>
     </div>
   </div>
 </section>
@@ -520,20 +519,6 @@
   </div>
 </footer>
 
-<script>
-  // Auto-schimbare la lansare (1 septembrie 2026): scoate bara de anunț și
-  // schimbă linia din cardul de pachet. Previzualizare: adaugă ?postlaunch=1 la link.
-  (function () {
-    var launch = new Date(2026, 8, 1, 0, 0, 0); // luna 8 = septembrie (0-indexed)
-    var preview = /[?&]postlaunch=1/.test(location.search);
-    if (preview || new Date() >= launch) {
-      var bar = document.querySelector('.announce');
-      if (bar) bar.remove();
-      var founder = document.querySelector('.pack .founder');
-      if (founder) founder.textContent = 'Preț special pentru primele cliente.';
-    }
-  })();
-</script>
 
 </body>
 </html>
