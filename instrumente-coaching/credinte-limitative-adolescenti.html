@@ -92,7 +92,7 @@
     padding-bottom: 14px;
     border-bottom: 0.5px solid var(--bordo);
   }
-  h1 {
+  h1, h2:where(.h1) {
     margin: 0;
     font-family: 'Fraunces', sans-serif;
     font-weight: 300;
@@ -100,7 +100,7 @@
     letter-spacing: -0.01em;
     color: var(--ink);
   }
-  h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  h1 em, h2:where(.h1) em { font-style: italic; color: var(--accent); font-weight: 400; }
   .subtitle {
     margin: 6px 0 0;
     font-size: 11px;
@@ -488,7 +488,7 @@
 
     /* Compact title block */
     #screen-summary header.top { margin-bottom: 10pt; padding-bottom: 6pt; }
-    #screen-summary h1 { font-size: 22pt; }
+    #screen-summary h1, #screen-summary h2:where(.h1) { font-size: 22pt; }
     #screen-summary .subtitle { font-size: 8pt; margin-top: 3pt; }
 
     /* Compact belief echo */
@@ -511,13 +511,13 @@
 
     /* Page-break tuning */
     .summary-block, .summary-ta { page-break-inside: avoid; }
-    h1, h3 { page-break-after: avoid; }
+    h1, h2:where(.h1), h3 { page-break-after: avoid; }
 
     /* Colors print better with a light touch */
     .belief-echo { color: #654199; border-color: #aebfa8; }
     .answer-pill { border-color: #aebfa8; background: #eef4ec; }
     .summary-ta-ex { border-left-color: #aebfa8; }
-    h1 em, h3 em, .q-text em, .summary-ta-stmt { color: #654199; }
+    h1 em, h2:where(.h1) em, h3 em, .q-text em, .summary-ta-stmt { color: #654199; }
   }
 
   /* Language toggle */
@@ -836,7 +836,7 @@
 
       <header class="top">
         <div>
-          <h1>Credințe <em>limitative</em> pentru adolescenți</h1>
+          <h2 class="h1">Credințe <em>limitative</em> pentru adolescenți</h2>
           <p class="subtitle">Rezumat · după Byron Katie</p>
         </div>
       </header>

@@ -146,7 +146,7 @@ html[lang="en"] body.cat-teens header.top > div:first-child::before { content: "
 html[lang="en"] body.cat-teams header.top > div:first-child::before { content: "Teams"; }
 html[lang="en"] body.cat-authors header.top > div:first-child::before { content: "1:1 · Authors"; }
 
-h1 {
+h1, h2:where(.h1) {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 500;
   font-size: clamp(38px, 5.5vw, 56px);
@@ -154,7 +154,7 @@ h1 {
   letter-spacing: -0.015em;
   color: var(--plum-deep, #5E3A4C);
 }
-h1 em {
+h1 em, h2:where(.h1) em {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 500;
