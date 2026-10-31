@@ -79,9 +79,7 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"></noscript>
+<noscript></noscript>
 <style>
   :root{--plum:#7A4E63;--plum-deep:#5E3A4C;--ochre:#C89A5B;--ochre-deep:#B07E3F;--ochre-text:#96662A;--cream:#FAF6F0;--cream-2:#F3ECE1;--charcoal:#2E2A28;--line:rgba(46,42,40,.14)}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -129,7 +127,7 @@
   article li{margin-bottom:9px}
   article strong{color:var(--plum-deep);font-weight:600}
   article em{font-style:italic}
-  article a[href^="/blog/"]{color:var(--ochre-text);text-decoration:none;border-bottom:1px solid var(--ochre)}
+  article a[href^="/blog/"],article a[href^="/instrumente-coaching/"]{color:var(--ochre-text);text-decoration:none;border-bottom:1px solid var(--ochre)}
   .cta{display:inline-block;margin:10px 0 10px;background:var(--ochre);color:#fff;font-weight:600;padding:14px 28px;border-radius:999px;text-decoration:none;box-shadow:0 12px 26px -12px rgba(176,126,63,.7)}
   .cta:hover{background:var(--ochre-deep)}
   .cta-sub{font-style:italic;opacity:.8;font-size:1rem;margin-bottom:26px}
@@ -143,8 +141,29 @@
 
   /* hide-nav-cta-mobile */
   @media (max-width:992px){.nav-cta{display:none}}
+:where(article p,article li) a:where(:not(.cta)){color:var(--ochre-text,#96662A);text-decoration:none;border-bottom:1px solid var(--ochre,#C89A5B)}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
+<style>
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-i400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-i400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:500;font-display:swap;src:url(/assets/fonts/fraunces-i500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:500;font-display:swap;src:url(/assets/fonts/fraunces-i500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-n400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-n400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/fraunces-n500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/fraunces-n500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/fraunces-n600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/fraunces-n600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Instrument Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-i400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-i400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+</style>
 </head>
 <body>
 <div class="siteheader">
@@ -209,7 +228,7 @@
     <p class="say">„Am nevoie să fiu acceptat, deci trebuie să spun da.”<br>„Am nevoie de siguranță, deci nu pot avea această conversație.”<br>„Am nevoie să mă simt util, deci trebuie să rezolv problema celuilalt.”</p>
     <p>Dar nevoia și felul în care încercăm să avem grijă de ea sunt două lucruri diferite. Nevoia arată ce este important pentru noi. Comportamentul este soluția pe care am învățat să o folosim pentru a obține sau a proteja acel lucru.</p>
     <p>Dacă ai nevoie de acceptare, poți încerca să o obții fiind mereu de acord cu ceilalți. Dar poți și să construiești relații în care diferențele de opinie sunt permise.</p>
-    <p>Dacă ai nevoie de apreciere, poți munci până la epuizare pentru a deveni indispensabil. Dar poți și să vorbești deschis despre contribuția ta.</p>
+    <p>Dacă ai nevoie de apreciere, poți munci <a href="/blog/cum-am-ajuns-sa-creez-spatiul.html">până la epuizare</a> pentru a deveni indispensabil. Dar poți și să vorbești deschis despre contribuția ta.</p>
     <p>Dacă ai nevoie să fii util, poți prelua problemele tuturor. Dar poți și să întrebi: „Ai nevoie de ajutorul meu sau doar vrei să te ascult?”</p>
     <p>Continuăm câteodată să folosim o soluție veche fiindcă ne-a ajutat cândva. Poate am învățat că suntem acceptați când nu deranjăm, apreciați când avem rezultate sau iubiți când avem grijă de toată lumea. Comportamentul a avut un rost. Nu trebuie să ne judecăm pentru el.</p>
     <p>Putem însă verifica dacă ne mai ajută astăzi.</p>
@@ -244,6 +263,7 @@
       <li>Marcia Reynolds, <em>Coaching transformațional. Însoțește omul, nu problema. Un ghid al investigării reflexive</em>, traducere de Tatiana Chera, Editura B.M.I., 2021.</li>
     </ul>
 
+    <p>Dacă vrei să vezi în ce zone îți e mai greu să spui ce gândești, încearcă instrumentul gratuit <a href="/instrumente-coaching/roata-increderii.html">Roata încrederii</a>.</p>
     <p>Dacă te regăsești în aceste situații și ai vrea să înțelegi ce se află în spatele răspunsurilor tale automate, hai să ne cunoaștem. <a href="/blog/prima-sedinta-de-cunoastere.html">Prima ședință de cunoaștere</a> este gratuită: o jumătate de oră în care vedem, fără nicio obligație, dacă ți se potrivește.</p>
     <p><a class="cta" href="https://calendly.com/annamaria-brad/sedinta-coaching" target="_blank" rel="noopener" data-umami-event="calendly" data-umami-event-loc="blog-cum-sa-spun-nu-1">Programează o ședință gratuită</a></p>
     <p class="cta-sub">30 de minute, online, fără nicio obligație, doar o conversație despre ce urmează pentru tine.</p>
