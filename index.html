@@ -77,6 +77,16 @@
 @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
 @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(/assets/fonts/instrumentsans-n600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  .hp-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  @media (max-width:860px){.hp-posts{grid-template-columns:1fr}}
+  .hp-post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:0 18px 46px -32px rgba(94,58,76,.45);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+  .hp-post:hover{transform:translateY(-2px);box-shadow:0 26px 54px -30px rgba(94,58,76,.5)}
+  .hp-post time{font-size:13px;color:var(--ochre-text);font-weight:600;letter-spacing:.02em}
+  .hp-post h3{font-family:"Fraunces",serif;font-weight:500;color:var(--plum-deep);font-size:1.3rem;line-height:1.2;margin:6px 0 10px}
+  .hp-post p{opacity:.85;font-size:.96rem;flex:1}
+  .hp-post .more{margin-top:14px;color:var(--plum);font-weight:600;font-size:.95rem}
+  .hp-all{text-align:center;margin-top:28px}
+  .hp-all a{color:var(--ochre-text);font-weight:600;text-decoration:none;border-bottom:1px solid var(--ochre)}
 </style>
 <style>
   :root{
@@ -409,6 +419,36 @@
         <figcaption>Sandra S.</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section id="articole" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">
+      <span class="kicker">Blog</span>
+      <h2>Ultimele articole</h2>
+    </div>
+    <div class="hp-posts">
+      <a class="hp-post" href="/blog/decizia-e-a-ta.html">
+        <time datetime="2026-10-21">21 octombrie 2026</time>
+        <h3>Decizia e a ta. Te-ar ajuta o altă perspectivă?</h3>
+        <p>Cum ceri sprijin când ai o decizie de luat, fără să lași pe altcineva să aleagă pentru tine.</p>
+        <span class="more">Citește →</span>
+      </a>
+      <a class="hp-post" href="/blog/dincolo-de-zona-de-confort.html">
+        <time datetime="2026-10-13">13 octombrie 2026</time>
+        <h3>Dincolo de zona de confort. Sau de ce familiar nu înseamnă neapărat bine</h3>
+        <p>Numim zonă de confort un spațiu care e, de fapt, familiaritate.</p>
+        <span class="more">Citește →</span>
+      </a>
+      <a class="hp-post" href="/blog/tipare-comportamentale.html">
+        <time datetime="2026-10-05">5 octombrie 2026</time>
+        <h3>De ce reacționăm pe pilot automat?</h3>
+        <p>De ce repetăm comportamente despre care știm că nu ne ajută?</p>
+        <span class="more">Citește →</span>
+      </a>
+    </div>
+    <p class="hp-all"><a href="/blog/">Toate articolele →</a></p>
   </div>
 </section>
 
