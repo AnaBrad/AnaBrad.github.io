@@ -159,7 +159,7 @@
   article li{margin-bottom:9px}
   article strong{color:var(--plum-deep);font-weight:600}
   article em{font-style:italic}
-  article a[href^="/blog/"]{color:var(--ochre-text);text-decoration:none;border-bottom:1px solid var(--ochre)}
+  article a[href^="/blog/"],article a[href^="/instrumente-coaching/"]{color:var(--ochre-text);text-decoration:none;border-bottom:1px solid var(--ochre)}
   .cta{display:inline-block;margin:10px 0 10px;background:var(--ochre);color:#fff;font-weight:600;padding:14px 28px;border-radius:999px;text-decoration:none;box-shadow:0 12px 26px -12px rgba(176,126,63,.7)}
   .cta:hover{background:var(--ochre-deep)}
   .cta-sub{font-style:italic;opacity:.8;font-size:1rem;margin-bottom:26px}
@@ -173,6 +173,7 @@
 
   /* hide-nav-cta-mobile */
   @media (max-width:992px){.nav-cta{display:none}}
+:where(article p,article li) a:where(:not(.cta)){color:var(--ochre-text,#96662A);text-decoration:none;border-bottom:1px solid var(--ochre,#C89A5B)}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
 <style>
@@ -259,6 +260,7 @@
 
     <h2>Dacă încă nu ne cunoaștem</h2>
     <p>Începem cu o discuție gratuită de 30 de minute, online, în care ne cunoaștem și vedem dacă ni se potrivește să lucrăm împreună. Am povestit despre ea în articolul <a href="/blog/prima-sedinta-de-cunoastere.html">„Ședința de cunoaștere: la ce să te aștepți”</a>.</p>
+    <p>Unele exerciții le poți face și singură, online: încearcă gratuit <a href="/instrumente-coaching/">instrumentele de coaching</a> de pe site.</p>
     <p>Dacă simți că ți-ar prinde bine să vorbim, poți programa o ședință de cunoaștere. Nu trebuie să ai deja toate gândurile în ordine. Pornim de la ce te preocupă acum.</p>
     <p><a class="cta" href="https://calendly.com/annamaria-brad/sedinta-coaching" target="_blank" rel="noopener" data-umami-event="calendly" data-umami-event-loc="blog-coaching-online-sedinta-1">Programează o ședință gratuită</a></p>
     <p class="cta-sub">30 de minute, online, fără nicio obligație, doar o conversație despre ce urmează pentru tine.</p>
