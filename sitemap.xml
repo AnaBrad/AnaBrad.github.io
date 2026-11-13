@@ -276,4 +276,10 @@
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/confidentialitate.html"/>
   </url>
+  <url>
+    <loc>https://anamariabrad.ro/instrumente-coaching/dezvoltare-personala.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
