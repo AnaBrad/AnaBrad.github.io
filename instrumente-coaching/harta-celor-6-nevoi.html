@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harta celor 6 nevoi — Instrument de coaching</title>
+<meta name="description" content="Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un scor fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum. 5 minute, gratuit.">
+<meta name="author" content="Ana-Maria Brad">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harta celor 6 nevoi — Instrument de coaching">
+<meta property="og:description" content="Ce-ți lipsește, de fapt? Dă un scor celor 6 nevoi umane și vezi-ți harta.">
+<meta property="og:url" content="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://anamariabrad.ro/instrumente-coaching/og-harta-celor-6-nevoi.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harta celor 6 nevoi — Instrument de coaching">
+<meta name="twitter:description" content="Ce-ți lipsește, de fapt? Dă un scor celor 6 nevoi umane și vezi-ți harta.">
+<meta name="twitter:image" content="https://anamariabrad.ro/instrumente-coaching/og-harta-celor-6-nevoi.png">
+
+<link rel="canonical" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
+<link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
+<link rel="alternate" hreflang="x-default" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237A4E63'/%3E%3Cpolygon points='50,22 74,36 74,64 50,78 26,64 26,36' fill='none' stroke='%23C89A5B' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-sans-400-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+  :root{
+    --paper:#FAF6F0; --paper-soft:#F3ECE1; --paper-deep:rgba(46,42,40,.14); --surface:rgba(255,255,255,.72);
+    --ink:#2E2A28; --ink-soft:#564b52; --ink-mute:#6E645D;
+    --accent:#7A4E63; --accent-deep:#5E3A4C; --ochre:#B07E3F; --ochre-text:#906128;
+    --grid:#ddd0d5; --fill:rgba(122,78,99,.20); --radius:12px; --radius-lg:22px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Instrument Sans',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .page{max-width:880px;margin:0 auto;padding:24px 20px 60px}
+  .back-link{display:inline-block;font-size:15px;font-weight:600;color:var(--ink-soft);text-decoration:none;margin-bottom:16px}
+  .back-link:hover{color:var(--accent)}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.8);border:1px solid var(--paper-deep);border-radius:999px;padding:5px 14px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(2.4rem,7vw,4rem);line-height:1.02;letter-spacing:-.02em;margin:14px 0 22px;color:var(--ink)}
+  h1 em{font-style:italic;color:var(--accent)}
+  .progress{display:flex;justify-content:space-between;background:var(--surface);border:1px solid var(--paper-deep);border-radius:999px;padding:12px clamp(16px,5vw,40px);margin-bottom:22px;position:relative}
+  .pstep{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11.5px;color:var(--ink-mute);text-align:center;z-index:1;background:transparent}
+  .pdot{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--paper-deep);background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+  .pstep.active .pdot{background:var(--accent);border-color:var(--accent);color:#fff}
+  .pstep.done .pdot{border-color:var(--accent);color:var(--accent)}
+  .pstep.active{color:var(--accent-deep);font-weight:600}
+  .card{background:var(--surface);border:1px solid var(--paper-deep);border-radius:var(--radius-lg);padding:clamp(22px,5vw,44px);box-shadow:0 2px 4px rgba(46,42,40,.03),0 12px 32px rgba(46,42,40,.05)}
+  .card h2{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(1.6rem,4.5vw,2.2rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+  .card h2 em{font-style:italic;color:var(--accent)}
+  .card p{color:var(--ink-soft);margin:0 0 14px;max-width:38rem}
+  .overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0}
+  @media (max-width:600px){.overview{grid-template-columns:1fr}}
+  .ov{background:var(--paper-soft);border:1px solid var(--paper-deep);border-radius:var(--radius);padding:14px 16px}
+  .ov b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.9rem;color:var(--accent);line-height:1}
+  .ov span{font-size:14px;color:var(--ink-soft)}
+  .pill-note{display:inline-block;border:1px solid var(--paper-deep);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--ink-mute);background:var(--paper-soft)}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .btn{font:inherit;font-size:15px;font-weight:600;border-radius:999px;padding:12px 24px;cursor:pointer;border:1px solid var(--accent);background:transparent;color:var(--accent-deep);text-decoration:none;display:inline-flex;align-items:center}
+  .btn:hover{background:var(--paper-soft)}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-deep)}
+  .btn.ghost{border-color:var(--paper-deep);color:var(--ink-mute);font-weight:500}
+  .needs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 6px}
+  @media (max-width:600px){.needs{grid-template-columns:1fr}}
+  .need{border:1px solid var(--paper-deep);border-radius:var(--radius);padding:14px 16px;background:rgba(255,255,255,.6)}
+  .need h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.2rem;margin:0 0 4px;color:var(--accent-deep)}
+  .need.s h3{color:var(--ochre-text)}
+  .need p{font-size:14.5px;margin:0}
+  .group-label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin:18px 0 0}
+  .rate{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,19rem);gap:28px;align-items:center}
+  @media (max-width:720px){.rate{grid-template-columns:1fr}}
+  .slider{display:grid;grid-template-columns:8.5rem minmax(0,1fr) 2rem;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--paper-deep)}
+  .slider:last-child{border-bottom:0}
+  .slider label{font-family:'Fraunces',Georgia,serif;font-size:1.08rem;color:var(--accent-deep);line-height:1.2}
+  .slider.s label{color:var(--ochre-text)}
+  .slider label small{display:block;font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--ink-mute)}
+  .slider output{font-family:'Fraunces',Georgia,serif;font-size:1.35rem;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  svg.hex{width:100%;height:auto;display:block}
+  .scale{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-mute);margin:2px 0 8px}
+  .result{display:grid;grid-template-columns:minmax(0,22rem) minmax(0,1fr);gap:28px;align-items:start}
+  @media (max-width:720px){.result{grid-template-columns:1fr}}
+  .obs{display:grid;gap:12px}
+  .obs div{border-left:3px solid var(--accent);padding:4px 0 4px 14px}
+  .obs div.t{border-left-color:var(--ochre)}
+  .obs b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);font-weight:600}
+  .obs span{color:var(--ink)}
+  textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--paper-deep);border-radius:10px;padding:10px 12px;resize:vertical;min-height:80px}
+  textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--fill)}
+  .field-label{display:block;font-weight:600;color:var(--accent-deep);margin:22px 0 6px}
+  .open-q{background:var(--paper-soft);border-radius:var(--radius);padding:16px 18px;margin-top:22px}
+  .open-q h3{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.25rem;margin:0 0 6px}
+  .open-q ul{margin:6px 0 0 18px;padding:0;color:var(--ink-soft)}
+  .open-q li{margin-bottom:4px}
+  .next-step{margin-top:22px;padding:22px 24px;background:var(--surface);border:1px solid var(--paper-deep);border-left:3px solid var(--accent);border-radius:var(--radius-lg)}
+  .next-step-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:6px}
+  .next-step-title{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:22px;margin:0 0 8px;color:var(--ink)}
+  .next-step-title em{color:var(--accent);font-style:italic}
+  .next-step-body{margin:0 0 16px;font-size:14.5px;color:var(--ink-soft)}
+  .next-step-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .note{font-size:13px;color:var(--ink-mute);margin-top:22px;border-top:1px solid var(--paper-deep);padding-top:14px}
+  .all-tools-link{text-align:center;margin:28px 0 0}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--paper-deep);font-size:12px;color:var(--ink-mute);text-align:center}
+  footer a{color:var(--accent-deep);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  [hidden]{display:none!important}
+  @media (prefers-reduced-motion:no-preference){.screen{animation:in .35s ease}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
+<link rel="stylesheet" href="assets/tool-page.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Harta celor 6 nevoi",
+ "headline": "Harta celor 6 nevoi — Instrument de coaching",
+ "description": "Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un scor fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum.",
+ "url": "https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html",
+ "inLanguage": "ro",
+ "applicationCategory": "LifestyleApplication",
+ "operatingSystem": "Web browser",
+ "isAccessibleForFree": true,
+ "author": {"@type": "Person", "name": "Ana-Maria Brad", "url": "https://anamariabrad.ro/"}
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://anamariabrad.ro/"},
+  {"@type": "ListItem", "position": 2, "name": "Instrumente de coaching", "item": "https://anamariabrad.ro/instrumente-coaching/"},
+  {"@type": "ListItem", "position": 3, "name": "Harta celor 6 nevoi"}
+ ]
+}
+</script>
+</head>
+<body class="cat-adults">
+<div class="page">
+  <a href="index.html" class="back-link">← Instrumente coaching</a> &nbsp;·&nbsp; <a class="back-link" href="https://anamariabrad.ro/">Acasă</a> &nbsp;·&nbsp; <a class="back-link" href="https://anamariabrad.ro/blog/">Blog</a>
+
+  <div><span class="badge">Instrument de coaching · după Tony Robbins și Cloé Madanes</span></div>
+  <h1>Harta celor <em>6 nevoi</em></h1>
+
+  <nav class="progress" aria-label="Pașii exercițiului">
+    <div class="pstep active" data-p="0"><div class="pdot">1</div><div>Cele 6<br>nevoi</div></div>
+    <div class="pstep" data-p="1"><div class="pdot">2</div><div>Scorurile<br>tale</div></div>
+    <div class="pstep" data-p="2"><div class="pdot">★</div><div>Harta<br>ta</div></div>
+  </nav>
+
+  <main>
+    <!-- intro -->
+    <section class="card screen" id="sc-intro" aria-labelledby="h-intro">
+      <h2 id="h-intro">Ce-ți lipsește, <em>de fapt?</em></h2>
+      <p>Modelul celor 6 nevoi umane a fost dezvoltat de Tony Robbins și Cloé Madanes, din experiența lor de coaching, și e folosit astăzi de mulți coachi ca instrument de reflecție. Premisa lui: în spatele multor decizii, reacții sau blocaje se află încercarea de a împlini una sau mai multe nevoi.</p>
+      <p>Exercițiul de aici îți arată cum stau acum nevoile tale. Nu este un test psihologic și nu pune etichete. Sensul scorurilor îl dai tu.</p>
+      <div class="overview">
+        <div class="ov"><b>1</b><span>Afli pe scurt ce înseamnă fiecare nevoie</span></div>
+        <div class="ov"><b>2</b><span>Dai fiecăreia un scor de la 0 la 10</span></div>
+        <div class="ov"><b>3</b><span>Îți vezi harta și notezi ce observi</span></div>
+      </div>
+      <p>Nu există scoruri corecte. Gândește-te la ultima lună și urmează primul impuls.</p>
+      <span class="pill-note">5 minute. Nimic din ce completezi nu se salvează și nu se trimite nicăieri.</span>
+      <div class="actions"><button class="btn primary" type="button" data-go="needs" data-umami-event="tool-start" data-umami-event-tool="harta-6-nevoi">Începe exercițiul →</button></div>
+    </section>
+
+    <!-- step 1 -->
+    <section class="card screen" id="sc-needs" aria-labelledby="h-needs" hidden>
+      <h2 id="h-needs">Cele <em>6 nevoi</em></h2>
+      <p>Primele patru sunt nevoile personalității: ne țin pe linia de plutire în viața de zi cu zi. Ultimele două sunt nevoile spiritului: aduc împlinire și sens pe termen lung.</p>
+      <p class="group-label">Nevoile personalității</p>
+      <div class="needs" id="needsP"></div>
+      <p class="group-label">Nevoile spiritului</p>
+      <div class="needs" id="needsS"></div>
+      <div class="actions"><button class="btn ghost" type="button" data-go="intro">← Înapoi</button><button class="btn primary" type="button" data-go="rate">Mai departe →</button></div>
+    </section>
+
+    <!-- step 2 -->
+    <section class="card screen" id="sc-rate" aria-labelledby="h-rate" hidden>
+      <h2 id="h-rate">Cât de hrănită e <em>fiecare nevoie</em> acum?</h2>
+      <p>Gândește-te la ultima lună. 0 înseamnă că nevoia e deloc împlinită, 10 că e împlinită pe deplin. Harta se desenează pe măsură ce muți cursoarele.</p>
+      <div class="rate">
+        <div id="sliders"></div>
+        <svg class="hex" id="hexSmall" viewBox="-58 0 516 412" role="img" aria-label="Harta nevoilor tale"></svg>
+      </div>
+      <div class="actions"><button class="btn ghost" type="button" data-go="needs">← Înapoi</button><button class="btn primary" type="button" data-go="result" data-umami-event="tool-complete" data-umami-event-tool="harta-6-nevoi">Vezi harta ta →</button></div>
+    </section>
+
+    <!-- result -->
+    <section class="card screen" id="sc-result" aria-labelledby="h-result" hidden>
+      <h2 id="h-result">Harta <em>ta</em></h2>
+      <div class="result">
+        <svg class="hex" id="hexBig" viewBox="-58 0 516 412" role="img" aria-label="Harta nevoilor tale"></svg>
+        <div class="obs" id="obs" aria-live="polite"></div>
+      </div>
+      <label class="field-label" for="observe">Ce observi privind harta?</label>
+      <textarea id="observe" placeholder="Ce te surprinde? Ce confirmă ce știai deja?"></textarea>
+
+      <div class="open-q">
+        <h3>Ce rămâne de explorat</h3>
+        <p style="margin:0">Harta arată unde ești. Întrebările care urmează duc spre ce poți face:</p>
+        <ul>
+          <li>Pe ce căi îți hrănești acum fiecare nevoie? Care te hrănesc și care te costă?</li>
+          <li>Care sunt cele două nevoi pe care le pui, de obicei, pe primul loc și cum se văd ele în deciziile tale?</li>
+          <li>Ce nevoie cere atenție acum și ce pas mic ai putea testa în următoarele zile?</li>
+        </ul>
+      </div>
+
+      <aside class="next-step" aria-label="Pasul următor">
+        <div class="next-step-eyebrow">Pasul următor</div>
+        <h3 class="next-step-title">Ai văzut harta. <em>Hai să o citim împreună.</em></h3>
+        <p class="next-step-body">În ședințele de coaching lucrez cu această hartă pas cu pas: ce te hrănește, ce te costă și ce pas mic merită testat. Prima ședință de cunoaștere este gratuită, durează aproximativ 30 de minute și nu presupune nicio obligație.</p>
+        <div class="next-step-actions">
+          <a class="btn primary" href="https://calendly.com/annamaria-brad/sedinta-coaching" target="_blank" rel="noopener" data-umami-event="calendly" data-umami-event-loc="tool-harta-6-nevoi">Programează o ședință gratuită</a>
+          <a class="btn" href="/blog/cele-6-nevoi-umane.html">Citește articolul despre cele 6 nevoi →</a>
+        </div>
+      </aside>
+
+      <p class="note">Coachingul nu înlocuiește evaluarea medicală sau psihoterapia. Dacă stările de epuizare, anxietate sau tristețe persistă și îți afectează viața de zi cu zi, e important să ceri sprijinul unui specialist în sănătate mintală.</p>
+      <div class="actions"><button class="btn ghost" type="button" data-go="rate">← Modifică scorurile</button><button class="btn ghost" type="button" id="restart">Începe din nou</button></div>
+    </section>
+  </main>
+
+  <p class="all-tools-link"><a href="index.html" class="back-link">← Toate instrumentele de coaching</a></p>
+  <footer>
+    © Ana-Maria Brad · Instrument de coaching · citește și <a href="/blog/cele-6-nevoi-umane.html">Ce-ți lipsește, de fapt? Cele 6 nevoi umane</a> · <a href="https://calendly.com/annamaria-brad/sedinta-coaching" target="_blank" rel="noopener" data-umami-event="calendly" data-umami-event-loc="tool-harta-6-nevoi-footer">programează o ședință de cunoaștere</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  // Order around the hexagon puts opposite needs face to face.
+  const NEEDS=[
+    {id:"sig",n:"Siguranța",a:"siguranță",d:"certitudine, stabilitate, confort",t:"p",x:"Nevoia de stabilitate, predictibilitate, confort și protecție în fața durerii sau a haosului."},
+    {id:"apr",n:"Aprecierea",a:"apreciere",d:"ce faci să conteze",t:"p",x:"Nevoia de a simți că ceea ce faci contează și e văzut, că aduci ceva doar al tău."},
+    {id:"cre",n:"Creșterea",a:"creștere",d:"să înveți, să evoluezi",t:"s",x:"Nevoia de a evolua, de a învăța, de a-ți extinde capacitățile și de a nu stagna."},
+    {id:"var",n:"Varietatea",a:"varietate",d:"noutate, surpriză, provocare",t:"p",x:"Nevoia de noutate, surpriză, provocare și stimulare: tot ce sparge rutina."},
+    {id:"con",n:"Conexiunea",a:"conexiune",d:"apropiere, apartenență, iubire",t:"p",x:"Nevoia de apropiere, apartenență, încredere și de a fi parte reală din viața cuiva."},
+    {id:"cnt",n:"Contribuția",a:"contribuție",d:"să oferi dincolo de tine",t:"s",x:"Nevoia de a oferi dincolo de propria persoană, de a sprijini și de a lăsa ceva valoros în urmă."}
+  ];
+  const PAIRS=[["sig","var","Prea multă siguranță poate aduce plafonare și plictiseală, iar varietatea fără o ancoră de stabilitate poate aduce haos."],
+               ["apr","con","Nevoia de a ieși în evidență poate pune distanță față de ceilalți, iar conexiunea cu orice preț poate să-ți acopere propria voce."],
+               ["cre","cnt","Creșterea fără contribuție se poate închide în tine, iar contribuția fără creștere te poate goli."]];
+  const scores=Object.fromEntries(NEEDS.map(x=>[x.id,5]));
+  const $=id=>document.getElementById(id);
+  const byId=id=>NEEDS.find(x=>x.id===id);
+
+  const card=x=>`<div class="need ${x.t}"><h3>${x.n}</h3><p>${x.x}</p></div>`;
+  $("needsP").innerHTML=NEEDS.filter(x=>x.t==="p").map(card).join("");
+  $("needsS").innerHTML=NEEDS.filter(x=>x.t==="s").map(card).join("");
+  $("sliders").innerHTML=NEEDS.map(x=>`<div class="slider ${x.t}"><label for="r-${x.id}">${x.n}<small>${x.d}</small></label><input type="range" id="r-${x.id}" min="0" max="10" step="1" value="5"><output id="o-${x.id}" for="r-${x.id}">5</output></div>`).join("");
+  NEEDS.forEach(x=>$("r-"+x.id).addEventListener("input",e=>{scores[x.id]=+e.target.value;$("o-"+x.id).textContent=e.target.value;draw("hexSmall");}));
+
+  const CX=200,CY=206,R=140;
+  const pt=(i,r)=>[CX+r*Math.sin(i*Math.PI/3),CY-r*Math.cos(i*Math.PI/3)];
+  function draw(target){
+    let s="";
+    for(let k=1;k<=10;k++){const p=NEEDS.map((_,i)=>pt(i,R*k/10).map(v=>v.toFixed(1)).join(",")).join(" ");
+      s+=`<polygon points="${p}" fill="none" stroke="${k===10?'#7A4E63':'#ddd0d5'}" stroke-width="${k===10?1.4:(k===5?1:.6)}"/>`;}
+    NEEDS.forEach((_,i)=>{const [x,y]=pt(i,R);s+=`<line x1="${CX}" y1="${CY}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#ddd0d5" stroke-width=".8"/>`;});
+    const shape=NEEDS.map((x,i)=>pt(i,R*scores[x.id]/10).map(v=>v.toFixed(1)).join(",")).join(" ");
+    s+=`<polygon points="${shape}" fill="rgba(122,78,99,.20)" stroke="#7A4E63" stroke-width="2" stroke-linejoin="round"/>`;
+    NEEDS.forEach((x,i)=>{const [px,py]=pt(i,R*scores[x.id]/10);
+      s+=`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="5" fill="${x.t==='p'?'#7A4E63':'#B07E3F'}" stroke="#fff" stroke-width="1.5"/>`;
+      const [lx,ly]=pt(i,R+14);const anc=Math.abs(lx-CX)<5?"middle":(lx>CX?"start":"end");const dy=i===0?-8:(i===3?20:5);
+      s+=`<text x="${lx.toFixed(1)}" y="${(ly+dy).toFixed(1)}" text-anchor="${anc}" font-family="Fraunces, Georgia, serif" font-size="17" fill="${x.t==='p'?'#5E3A4C':'#906128'}">${x.n} <tspan font-weight="600">${scores[x.id]}</tspan></text>`;});
+    $(target).innerHTML=s;
+  }
+
+  function observations(){
+    const sorted=[...NEEDS].sort((a,b)=>scores[b.id]-scores[a.id]);
+    const fmt=arr=>arr.map(x=>`${x.n.toLowerCase()} (${scores[x.id]})`).join(" și ");
+    const max=scores[sorted[0].id],min=scores[sorted[5].id];
+    let h="";
+    if(max-min<=1){
+      h+=`<div><b>Ce arată harta</b><span>Scorurile sunt apropiate între ele (de la ${min} la ${max}). Merită să te întrebi dacă așa se simte cu adevărat sau dacă ai rămas aproape de mijloc pentru că e greu de ales.</span></div>`;
+    } else {
+      h+=`<div><b>Cel mai hrănite acum</b><span>${fmt(sorted.slice(0,2))}</span></div>`;
+      h+=`<div><b>Cel mai puțin hrănite acum</b><span>${fmt(sorted.slice(4).reverse())}</span></div>`;
+    }
+    PAIRS.forEach(([a,b,txt])=>{const d=Math.abs(scores[a]-scores[b]);
+      if(d>=4){const hi=scores[a]>scores[b]?byId(a):byId(b),lo=hi.id===a?byId(b):byId(a);
+        h+=`<div class="t"><b>O tensiune de urmărit</b><span>Între ${hi.a} (${scores[hi.id]}) și ${lo.a} (${scores[lo.id]}) e o diferență mare. Pe hartă, cele două stau față în față și se trag una pe alta. ${txt}</span></div>`;}});
+    h+=`<div><b>De reținut</b><span>Un scor mic nu e o problemă de rezolvat, iar 10 nu e o țintă. Harta arată unde ești acum, nu cine ești.</span></div>`;
+    $("obs").innerHTML=h;
+  }
+
+  const SCREENS={intro:0,needs:0,rate:1,result:2};
+  function go(name){
+    document.querySelectorAll(".screen").forEach(s=>s.hidden=s.id!=="sc-"+name);
+    const p=SCREENS[name];
+    document.querySelectorAll(".pstep").forEach(el=>{const i=+el.dataset.p;el.classList.toggle("active",name!=="intro"&&i===p);el.classList.toggle("done",name!=="intro"&&i<p);});
+    if(name==="rate")draw("hexSmall");
+    if(name==="result"){draw("hexBig");observations();}
+    const top=document.querySelector(".progress").getBoundingClientRect().top+window.scrollY-12;
+    if(window.scrollY>top)window.scrollTo({top,behavior:"smooth"});
+  }
+  document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b)go(b.dataset.go);});
+  $("restart").addEventListener("click",()=>{NEEDS.forEach(x=>{scores[x.id]=5;$("r-"+x.id).value=5;$("o-"+x.id).textContent=5;});$("observe").value="";go("intro");});
+  draw("hexSmall");
+})();
+</script>
+</body>
+</html>
