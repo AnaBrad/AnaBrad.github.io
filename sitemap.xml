@@ -9,9 +9,15 @@
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/blog/cele-6-nevoi-umane.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/blog/cele-6-nevoi-umane.html"/>
   </url>
   <url>
     <loc>https://anamariabrad.ro/blog/miscare-si-sens-atelier-valori-vaslui.html</loc>
