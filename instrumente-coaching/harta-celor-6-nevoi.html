@@ -280,8 +280,8 @@
     if(max-min<=1){
       h+=`<div><b>Ce arată harta</b><span>Scorurile sunt apropiate între ele (de la ${min} la ${max}). Merită să te întrebi dacă așa se simte cu adevărat sau dacă ai rămas aproape de mijloc pentru că e greu de ales.</span></div>`;
     } else {
-      h+=`<div><b>Cel mai hrănite acum</b><span>${fmt(sorted.slice(0,2))}</span></div>`;
-      h+=`<div><b>Cel mai puțin hrănite acum</b><span>${fmt(sorted.slice(4).reverse())}</span></div>`;
+      h+=`<div><b>Cele mai hrănite acum</b><span>${fmt(sorted.slice(0,2))}</span></div>`;
+      h+=`<div><b>Cele mai puțin hrănite acum</b><span>${fmt(sorted.slice(4).reverse())}</span></div>`;
     }
     PAIRS.forEach(([a,b,txt])=>{const d=Math.abs(scores[a]-scores[b]);
       if(d>=4){const hi=scores[a]>scores[b]?byId(a):byId(b),lo=hi.id===a?byId(b):byId(a);
