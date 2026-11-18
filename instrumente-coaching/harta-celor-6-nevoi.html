@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harta celor 6 nevoi — Instrument de coaching</title>
-<meta name="description" content="Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un scor fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum. 5 minute, gratuit.">
+<meta name="description" content="Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un punctaj fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum. 5 minute, gratuit.">
 <meta name="author" content="Ana-Maria Brad">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Harta celor 6 nevoi — Instrument de coaching">
-<meta property="og:description" content="Ce-ți lipsește, de fapt? Dă un scor celor 6 nevoi umane și vezi-ți harta.">
+<meta property="og:description" content="Ce-ți lipsește, de fapt? Dă un punctaj celor 6 nevoi umane și vezi-ți harta.">
 <meta property="og:url" content="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:image" content="https://anamariabrad.ro/instrumente-coaching/og-harta-celor-6-nevoi.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Harta celor 6 nevoi — Instrument de coaching">
-<meta name="twitter:description" content="Ce-ți lipsește, de fapt? Dă un scor celor 6 nevoi umane și vezi-ți harta.">
+<meta name="twitter:description" content="Ce-ți lipsește, de fapt? Dă un punctaj celor 6 nevoi umane și vezi-ți harta.">
 <meta name="twitter:image" content="https://anamariabrad.ro/instrumente-coaching/og-harta-celor-6-nevoi.png">
 
 <link rel="canonical" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html">
@@ -119,7 +119,7 @@
  "@type": "WebApplication",
  "name": "Harta celor 6 nevoi",
  "headline": "Harta celor 6 nevoi — Instrument de coaching",
- "description": "Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un scor fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum.",
+ "description": "Siguranță, varietate, apreciere, conexiune, creștere, contribuție. Dă un punctaj fiecărei nevoi și vezi pe hartă ce e hrănit și ce îți lipsește acum.",
  "url": "https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html",
  "inLanguage": "ro",
  "applicationCategory": "LifestyleApplication",
@@ -149,7 +149,7 @@
 
   <nav class="progress" aria-label="Pașii exercițiului">
     <div class="pstep active" data-p="0"><div class="pdot">1</div><div>Cele 6<br>nevoi</div></div>
-    <div class="pstep" data-p="1"><div class="pdot">2</div><div>Scorurile<br>tale</div></div>
+    <div class="pstep" data-p="1"><div class="pdot">2</div><div>Punctajele<br>tale</div></div>
     <div class="pstep" data-p="2"><div class="pdot">★</div><div>Harta<br>ta</div></div>
   </nav>
 
@@ -158,13 +158,13 @@
     <section class="card screen" id="sc-intro" aria-labelledby="h-intro">
       <h2 id="h-intro">Ce-ți lipsește, <em>de fapt?</em></h2>
       <p>Modelul celor 6 nevoi umane a fost dezvoltat de Tony Robbins și Cloé Madanes, din experiența lor de coaching, și e folosit ca instrument de reflecție. Premisa lui: în spatele multor decizii, reacții sau blocaje se află încercarea de a împlini una sau mai multe nevoi.</p>
-      <p>Exercițiul următor îți oferă o imagine clară asupra nevoilor tale din prezent. Nu este un test psihologic și nu pune etichete. Sensul scorurilor îl dai tu.</p>
+      <p>Exercițiul următor îți oferă o imagine clară asupra nevoilor tale din prezent. Nu este un test psihologic și nu pune etichete. Doar tu știi ce înseamnă punctajele pentru tine.</p>
       <div class="overview">
         <div class="ov"><b>1</b><span>Afli pe scurt ce înseamnă fiecare nevoie</span></div>
-        <div class="ov"><b>2</b><span>Dai fiecăreia un scor de la 0 la 10</span></div>
+        <div class="ov"><b>2</b><span>Dai fiecăreia un punctaj de la 0 la 10</span></div>
         <div class="ov"><b>3</b><span>Îți vezi harta și notezi ce observi</span></div>
       </div>
-      <p>Nu există scoruri corecte. Gândește-te la ultima lună și urmează primul impuls.</p>
+      <p>Nu există punctaje corecte. Gândește-te la ultima lună și urmează primul impuls.</p>
       <span class="pill-note">5 minute. Nimic din ce completezi nu se salvează și nu se trimite nicăieri.</span>
       <div class="actions"><button class="btn primary" type="button" data-go="needs" data-umami-event="tool-start" data-umami-event-tool="harta-6-nevoi">Începe exercițiul →</button></div>
     </section>
@@ -222,7 +222,7 @@
       </aside>
 
       <p class="note">Coachingul nu înlocuiește evaluarea medicală sau psihoterapia. Dacă stările de epuizare, anxietate sau tristețe persistă și îți afectează viața de zi cu zi, e important să ceri sprijinul unui specialist în sănătate mintală.</p>
-      <div class="actions"><button class="btn ghost" type="button" data-go="rate">← Modifică scorurile</button><button class="btn ghost" type="button" id="restart">Începe din nou</button></div>
+      <div class="actions"><button class="btn ghost" type="button" data-go="rate">← Modifică punctajele</button><button class="btn ghost" type="button" id="restart">Începe din nou</button></div>
     </section>
   </main>
 
@@ -278,7 +278,7 @@
     const max=scores[sorted[0].id],min=scores[sorted[5].id];
     let h="";
     if(max-min<=1){
-      h+=`<div><b>Ce arată harta</b><span>Scorurile sunt apropiate între ele (de la ${min} la ${max}). Merită să te întrebi dacă așa se simte cu adevărat sau dacă ai rămas aproape de mijloc pentru că e greu de ales.</span></div>`;
+      h+=`<div><b>Ce arată harta</b><span>Punctajele sunt apropiate între ele (de la ${min} la ${max}). Merită să te întrebi dacă așa se simte cu adevărat sau dacă ai rămas aproape de mijloc pentru că e greu de ales.</span></div>`;
     } else {
       h+=`<div><b>Cele mai hrănite acum</b><span>${fmt(sorted.slice(0,2))}</span></div>`;
       h+=`<div><b>Cele mai puțin hrănite acum</b><span>${fmt(sorted.slice(4).reverse())}</span></div>`;
@@ -286,7 +286,7 @@
     PAIRS.forEach(([a,b,txt])=>{const d=Math.abs(scores[a]-scores[b]);
       if(d>=4){const hi=scores[a]>scores[b]?byId(a):byId(b),lo=hi.id===a?byId(b):byId(a);
         h+=`<div class="t"><b>O tensiune de urmărit</b><span>Între ${hi.a} (${scores[hi.id]}) și ${lo.a} (${scores[lo.id]}) e o diferență mare. Pe hartă, cele două stau față în față și se influențează una pe alta. ${txt}</span></div>`;}});
-    h+=`<div><b>De reținut</b><span>Un scor mic nu e o problemă de rezolvat, iar 10 nu e o țintă. Harta arată unde ești acum, nu cine ești.</span></div>`;
+    h+=`<div><b>De reținut</b><span>Un punctaj mic nu e o problemă de rezolvat, iar 10 nu e o țintă. Harta arată unde ești acum, nu cine ești.</span></div>`;
     $("obs").innerHTML=h;
   }
 
