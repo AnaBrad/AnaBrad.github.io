@@ -82,6 +82,21 @@
   .slider output{font-family:'Fraunces',Georgia,serif;font-size:1.35rem;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
   input[type=range]{width:100%;accent-color:var(--accent)}
   svg.hex{width:100%;height:auto;display:block}
+  .hexwrap{display:grid;gap:6px;justify-items:center}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--ink-mute)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .ticks{display:grid;grid-template-columns:8.5rem minmax(0,1fr) 2rem;gap:12px;font-size:11.5px;color:var(--ink-mute);padding-bottom:2px}
+  .ticks div{display:flex;justify-content:space-between}
+  .need .tag{font-family:'Fraunces',Georgia,serif;font-size:1.08rem;color:var(--ink);margin:0 0 6px;line-height:1.3}
+  .need .more{font-size:13.5px;color:var(--ink-mute);margin:0}
+  .save-row{display:flex;justify-content:center;margin-top:12px}
+  @media (max-width:720px){
+    .rate .hexwrap{order:-1;position:sticky;top:0;z-index:3;background:var(--paper);border-bottom:1px solid var(--paper-deep);margin:0 calc(-1*clamp(22px,5vw,44px));padding:8px 0 6px}
+    .rate .hexwrap svg{max-width:250px}
+    .rate .hexwrap .legend{display:none}
+  }
+  @media (max-width:480px){.ticks{grid-template-columns:1fr}.ticks>span{display:none}}
   .scale{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-mute);margin:2px 0 8px}
   .result{display:grid;grid-template-columns:minmax(0,22rem) minmax(0,1fr);gap:28px;align-items:start}
   @media (max-width:720px){.result{grid-template-columns:1fr}}
@@ -185,8 +200,9 @@
       <h2 id="h-rate">Cât de hrănită e <em>fiecare nevoie</em> acum?</h2>
       <p>Raportează-te la ultima lună, de la 0 (deloc împlinită) la 10 (împlinită pe deplin). Harta se actualizează pe măsură ce muți cursoarele.</p>
       <div class="rate">
-        <div id="sliders"></div>
-        <svg class="hex" id="hexSmall" viewBox="-58 0 516 412" role="img" aria-label="Harta nevoilor tale"></svg>
+        <div><div class="ticks" aria-hidden="true"><span></span><div><span>0</span><span>5</span><span>10</span></div><span></span></div><div id="sliders"></div></div>
+        <div class="hexwrap"><svg class="hex" id="hexSmall" viewBox="-70 0 540 400" role="img" aria-label="Harta nevoilor tale"></svg>
+          <div class="legend"><span><i style="background:#7A4E63"></i>nevoile personalității</span><span><i style="background:#B07E3F"></i>nevoile spiritului</span></div></div>
       </div>
       <div class="actions"><button class="btn ghost" type="button" data-go="needs">← Înapoi</button><button class="btn primary" type="button" data-go="result" data-umami-event="tool-complete" data-umami-event-tool="harta-6-nevoi">Vezi harta ta →</button></div>
     </section>
@@ -195,7 +211,9 @@
     <section class="card screen" id="sc-result" aria-labelledby="h-result" hidden>
       <h2 id="h-result">Harta <em>ta</em></h2>
       <div class="result">
-        <svg class="hex" id="hexBig" viewBox="-58 0 516 412" role="img" aria-label="Harta nevoilor tale"></svg>
+        <div class="hexwrap"><svg class="hex" id="hexBig" viewBox="-70 0 540 400" role="img" aria-label="Harta nevoilor tale"></svg>
+          <div class="legend"><span><i style="background:#7A4E63"></i>nevoile personalității</span><span><i style="background:#B07E3F"></i>nevoile spiritului</span></div>
+          <div class="save-row"><button class="btn" type="button" id="saveImg" data-umami-event="tool-save" data-umami-event-tool="harta-6-nevoi">Salvează harta ca imagine</button></div></div>
         <div class="obs" id="obs" aria-live="polite"></div>
       </div>
       <label class="field-label" for="observe">Ce observi privind harta?</label>
@@ -250,13 +268,13 @@
   const $=id=>document.getElementById(id);
   const byId=id=>NEEDS.find(x=>x.id===id);
 
-  const card=x=>`<div class="need ${x.t}"><h3>${x.n}</h3><p>${x.x}</p></div>`;
+  const card=x=>`<div class="need ${x.t}"><h3>${x.n}</h3><p class="tag">${x.d.charAt(0).toUpperCase()+x.d.slice(1)}</p><p class="more">${x.x}</p></div>`;
   $("needsP").innerHTML=NEEDS.filter(x=>x.t==="p").map(card).join("");
   $("needsS").innerHTML=NEEDS.filter(x=>x.t==="s").map(card).join("");
   $("sliders").innerHTML=NEEDS.map(x=>`<div class="slider ${x.t}"><label for="r-${x.id}">${x.n}<small>${x.d}</small></label><input type="range" id="r-${x.id}" min="0" max="10" step="1" value="5"><output id="o-${x.id}" for="r-${x.id}">5</output></div>`).join("");
   NEEDS.forEach(x=>$("r-"+x.id).addEventListener("input",e=>{scores[x.id]=+e.target.value;$("o-"+x.id).textContent=e.target.value;draw("hexSmall");}));
 
-  const CX=200,CY=206,R=140;
+  const CX=200,CY=200,R=128;
   const pt=(i,r)=>[CX+r*Math.sin(i*Math.PI/3),CY-r*Math.cos(i*Math.PI/3)];
   function draw(target){
     let s="";
@@ -267,8 +285,8 @@
     s+=`<polygon points="${shape}" fill="rgba(122,78,99,.20)" stroke="#7A4E63" stroke-width="2" stroke-linejoin="round"/>`;
     NEEDS.forEach((x,i)=>{const [px,py]=pt(i,R*scores[x.id]/10);
       s+=`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="5" fill="${x.t==='p'?'#7A4E63':'#B07E3F'}" stroke="#fff" stroke-width="1.5"/>`;
-      const [lx,ly]=pt(i,R+14);const anc=Math.abs(lx-CX)<5?"middle":(lx>CX?"start":"end");const dy=i===0?-8:(i===3?20:5);
-      s+=`<text x="${lx.toFixed(1)}" y="${(ly+dy).toFixed(1)}" text-anchor="${anc}" font-family="Fraunces, Georgia, serif" font-size="17" fill="${x.t==='p'?'#5E3A4C':'#906128'}">${x.n} <tspan font-weight="600">${scores[x.id]}</tspan></text>`;});
+      const [lx,ly]=pt(i,R+14);const anc=Math.abs(lx-CX)<5?"middle":(lx>CX?"start":"end");const dy=i===0?-10:(i===3?24:7);
+      s+=`<text x="${lx.toFixed(1)}" y="${(ly+dy).toFixed(1)}" text-anchor="${anc}" font-family="Fraunces, Georgia, serif" font-size="21" fill="${x.t==='p'?'#5E3A4C':'#906128'}">${x.n} <tspan font-weight="600">${scores[x.id]}</tspan></text>`;});
     $(target).innerHTML=s;
   }
 
@@ -303,6 +321,33 @@
   document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b)go(b.dataset.go);});
   $("restart").addEventListener("click",()=>{NEEDS.forEach(x=>{scores[x.id]=5;$("r-"+x.id).value=5;$("o-"+x.id).textContent=5;});$("observe").value="";go("intro");});
   draw("hexSmall");
+
+  // Save the map as a PNG, drawn on a canvas with the page fonts.
+  $("saveImg").addEventListener("click",async()=>{
+    try{await document.fonts.ready;}catch(e){}
+    const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const g=c.getContext("2d");
+    g.fillStyle="#FAF6F0";g.fillRect(0,0,W,H);
+    g.fillStyle="#906128";g.font="600 24px 'Instrument Sans', Arial, sans-serif";g.fillText("HARTA CELOR 6 NEVOI",80,110);
+    g.fillStyle="#2E2A28";g.font="400 64px Fraunces, Georgia, serif";g.fillText("Harta mea, acum",80,190);
+    g.fillStyle="#6E645D";g.font="400 26px 'Instrument Sans', Arial, sans-serif";
+    g.fillText(new Date().toLocaleDateString("ro-RO",{day:"numeric",month:"long",year:"numeric"}),80,240);
+    const cx=540,cy=640,r=300,P=(i,rr)=>[cx+rr*Math.sin(i*Math.PI/3),cy-rr*Math.cos(i*Math.PI/3)];
+    for(let k=1;k<=10;k++){g.beginPath();NEEDS.forEach((_,i)=>{const [x,y]=P(i,r*k/10);i?g.lineTo(x,y):g.moveTo(x,y);});g.closePath();
+      g.strokeStyle=k===10?"#7A4E63":"#ddd0d5";g.lineWidth=k===10?2.5:(k===5?1.6:1);g.stroke();}
+    NEEDS.forEach((_,i)=>{const [x,y]=P(i,r);g.beginPath();g.moveTo(cx,cy);g.lineTo(x,y);g.strokeStyle="#ddd0d5";g.lineWidth=1.2;g.stroke();});
+    g.beginPath();NEEDS.forEach((x,i)=>{const [px,py]=P(i,r*scores[x.id]/10);i?g.lineTo(px,py):g.moveTo(px,py);});g.closePath();
+    g.fillStyle="rgba(122,78,99,.22)";g.fill();g.strokeStyle="#7A4E63";g.lineWidth=4;g.lineJoin="round";g.stroke();
+    NEEDS.forEach((x,i)=>{const [px,py]=P(i,r*scores[x.id]/10);g.beginPath();g.arc(px,py,10,0,7);g.fillStyle=x.t==="p"?"#7A4E63":"#B07E3F";g.fill();g.lineWidth=3;g.strokeStyle="#fff";g.stroke();
+      const [lx,ly]=P(i,r+30);g.textAlign=Math.abs(lx-cx)<5?"center":(lx>cx?"left":"right");g.fillStyle=x.t==="p"?"#5E3A4C":"#906128";
+      g.font="400 34px Fraunces, Georgia, serif";const dy=i===0?-14:(i===3?38:10);g.fillText(x.n+" "+scores[x.id],lx,ly+dy);});
+    g.textAlign="left";g.font="400 24px 'Instrument Sans', Arial, sans-serif";
+    [["#7A4E63","nevoile personalității",80],["#B07E3F","nevoile spiritului",420]].forEach(([col,txt,x])=>{g.beginPath();g.arc(x+9,1110,9,0,7);g.fillStyle=col;g.fill();g.fillStyle="#6E645D";g.fillText(txt,x+28,1118);});
+    g.strokeStyle="#C89A5B";g.lineWidth=2;g.beginPath();g.moveTo(80,1220);g.lineTo(W-80,1220);g.stroke();
+    g.fillStyle="#6E645D";g.font="400 24px 'Instrument Sans', Arial, sans-serif";g.fillText("Instrument de coaching · Ana-Maria Brad",80,1266);
+    g.textAlign="right";g.fillText("anamariabrad.ro",W-80,1266);
+    c.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="harta-celor-6-nevoi.png";document.body.appendChild(a);a.click();
+      setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");
+  });
 })();
 </script>
 </body>
