@@ -145,6 +145,8 @@
   @media (max-width:992px){.nav-cta{display:none}}
 :where(article p,article li) a:where(:not(.cta)){color:var(--ochre-text,#96662A);text-decoration:none;border-bottom:1px solid var(--ochre,#C89A5B)}
   .newsletter{margin:34px 0 10px}
+  .nl-mid{margin:28px 0;padding:14px 18px;border:1px solid rgba(122,78,99,.25);border-radius:14px;background:rgba(255,255,255,.6);font-size:.97rem;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between}
+  .nl-mid a{font-weight:600;color:#7A4E63;text-decoration:none;border-bottom:1px solid #C89A5B;white-space:nowrap}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="b5ff0883-f97b-4a71-9a06-bca898ee9886"></script>
 <style>
@@ -217,6 +219,7 @@ ml('account', '2806317');
     <p>Nevoile sociale nu se confundă cu valorile personale. Nevoia spune de ce avem nevoie într-o relație, iar valoarea spune ce principiu vrem să urmăm. Am scris despre asta în articolul despre <a href="/blog/cand-valorile-personale-intra-in-conflict.html">conflictul de valori</a>.</p>
     <p>Aceste nevoi ne pot susține calitățile și reușitele. Nevoia de apreciere ne poate încuraja să facem lucrurile bine. Nevoia de a fi utili ne poate transforma în oameni generoși. Nevoia de independență ne poate da curajul de a ne urma propriul drum.</p>
     <p>Dificultatea apare când nevoile ne conduc reacțiile fără să ne dăm seama.</p>
+    <aside class="nl-mid" aria-label="Abonare la articole"><span>Îți place ce citești? Primește articolele noi pe email, cam o dată pe lună.</span> <a href="#abonare" data-umami-event="newsletter-mid-click">Mă abonez ↓</a></aside>
 
     <h2>Ce încearcă să protejeze acel da?</h2>
     <p>Persoana foarte ocupată poate accepta încă o solicitare din motive diferite.</p>
@@ -277,7 +280,7 @@ ml('account', '2806317');
     <p><a class="cta" href="https://calendly.com/annamaria-brad/sedinta-coaching" target="_blank" rel="noopener" data-umami-event="calendly" data-umami-event-loc="blog-cum-sa-spun-nu-1">Programează o ședință gratuită</a></p>
     <p class="cta-sub">30 de minute, online, fără nicio obligație, doar o conversație despre ce urmează pentru tine.</p>
     <p class="write-me">Dacă te-a atins ceva din ce ai citit, <a href="mailto:ana@anamariabrad.ro">scrie-mi</a>. Mi-ar plăcea să te cunosc.</p>
-    <section class="newsletter" aria-label="Abonare la articole">
+    <section class="newsletter" id="abonare" aria-label="Abonare la articole" data-nl-loc="articol-final">
       <div class="ml-embedded" data-form="U2mpOr"></div>
     </section>
   </article>
@@ -292,5 +295,9 @@ ml('account', '2806317');
     <div class="small" style="margin-top:10px">© 2026 Ana-Maria Brad. Toate drepturile rezervate.</div>
   </div>
 </footer>
+<script>
+(function(){var seen={};function obs(){document.querySelectorAll('[data-nl-loc]').forEach(function(el){if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){var l=el.getAttribute('data-nl-loc');if(!seen[l]&&window.umami){seen[l]=1;umami.track('newsletter-view',{loc:l});}o.disconnect();}});},{threshold:0.5}).observe(el);});}
+if(document.readyState!=='loading')obs();else document.addEventListener('DOMContentLoaded',obs);})();
+</script>
 </body>
 </html>

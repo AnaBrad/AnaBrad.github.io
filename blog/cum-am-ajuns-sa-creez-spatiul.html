@@ -207,7 +207,7 @@ ml('account', '2806317');
     <p><a class="cta" href="/">Descoperă „Capitolul următor" →</a></p>
     <p>Am creat spațiul ăsta ca să scriu din nou. Și mă bucur că mi-am făcut timp și pentru asta.</p>
     <p class="write-me">Dacă te-a atins ceva din ce ai citit, <a href="mailto:ana@anamariabrad.ro">scrie-mi</a>. Mi-ar plăcea să te cunosc.</p>
-    <section class="newsletter" aria-label="Abonare la articole">
+    <section class="newsletter" id="abonare" aria-label="Abonare la articole" data-nl-loc="articol-final">
       <div class="ml-embedded" data-form="U2mpOr"></div>
     </section>
   </article>
@@ -222,5 +222,9 @@ ml('account', '2806317');
     <div class="small" style="margin-top:10px">© 2026 Ana-Maria Brad. Toate drepturile rezervate.</div>
   </div>
 </footer>
+<script>
+(function(){var seen={};function obs(){document.querySelectorAll('[data-nl-loc]').forEach(function(el){if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){var l=el.getAttribute('data-nl-loc');if(!seen[l]&&window.umami){seen[l]=1;umami.track('newsletter-view',{loc:l});}o.disconnect();}});},{threshold:0.5}).observe(el);});}
+if(document.readyState!=='loading')obs();else document.addEventListener('DOMContentLoaded',obs);})();
+</script>
 </body>
 </html>

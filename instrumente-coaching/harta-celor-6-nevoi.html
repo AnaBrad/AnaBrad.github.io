@@ -154,6 +154,12 @@
  ]
 }
 </script>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2806317');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body class="cat-adults">
 <div class="page">
@@ -238,6 +244,11 @@
           <a class="btn" href="/blog/cele-6-nevoi-umane.html">Citește articolul despre cele 6 nevoi →</a>
         </div>
       </aside>
+      <section class="newsletter" aria-label="Abonare la articole" data-nl-loc="harta-6-nevoi" style="margin-top:22px">
+        <p style="margin:0 0 8px;color:var(--ink-soft)">Nu e momentul pentru o ședință? Poți primi pe email articolele noi și câte un exercițiu de reflecție.</p>
+        <div class="ml-embedded" data-form="U2mpOr"></div>
+      </section>
+
 
       <p class="note">Coachingul nu înlocuiește evaluarea medicală sau psihoterapia. Dacă stările de epuizare, anxietate sau tristețe persistă și îți afectează viața de zi cu zi, e important să ceri sprijinul unui specialist în sănătate mintală.</p>
       <div class="actions"><button class="btn ghost" type="button" data-go="rate">← Modifică punctajele</button><button class="btn ghost" type="button" id="restart">Începe din nou</button></div>
@@ -349,6 +360,10 @@
       setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");
   });
 })();
+</script>
+<script>
+(function(){var seen={};function obs(){document.querySelectorAll('[data-nl-loc]').forEach(function(el){if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){var l=el.getAttribute('data-nl-loc');if(!seen[l]&&window.umami){seen[l]=1;umami.track('newsletter-view',{loc:l});}o.disconnect();}});},{threshold:0.5}).observe(el);});}
+if(document.readyState!=='loading')obs();else document.addEventListener('DOMContentLoaded',obs);})();
 </script>
 </body>
 </html>
