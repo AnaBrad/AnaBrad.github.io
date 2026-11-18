@@ -285,7 +285,7 @@
     }
     PAIRS.forEach(([a,b,txt])=>{const d=Math.abs(scores[a]-scores[b]);
       if(d>=4){const hi=scores[a]>scores[b]?byId(a):byId(b),lo=hi.id===a?byId(b):byId(a);
-        h+=`<div class="t"><b>O tensiune de urmărit</b><span>Între ${hi.a} (${scores[hi.id]}) și ${lo.a} (${scores[lo.id]}) e o diferență mare. Pe hartă, cele două stau față în față și se influențează una pe alta. ${txt}</span></div>`;}});
+        h+=`<div class="t"><b>De observat</b><span>Între ${hi.a} (${scores[hi.id]}) și ${lo.a} (${scores[lo.id]}) e o diferență mare. Pe hartă, cele două stau față în față și se influențează una pe alta. ${txt}</span></div>`;}});
     h+=`<div><b>De reținut</b><span>Un punctaj mic nu e o problemă de rezolvat, iar 10 nu e o țintă. Harta arată unde ești acum, nu cine ești.</span></div>`;
     $("obs").innerHTML=h;
   }
