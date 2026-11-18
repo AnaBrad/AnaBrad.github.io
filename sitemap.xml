@@ -271,6 +271,12 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi.html"/>
   </url>
   <url>
+    <loc>https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi-adolescenti.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/instrumente-coaching/harta-celor-6-nevoi-adolescenti.html"/>
+  </url>
+  <url>
     <loc>https://anamariabrad.ro/instrumente-coaching/valori.html</loc>
     <lastmod>2026-07-19</lastmod>
     <priority>0.6</priority>
@@ -290,7 +296,7 @@
   </url>
   <url>
     <loc>https://anamariabrad.ro/instrumente-coaching/dezvoltare-personala.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
