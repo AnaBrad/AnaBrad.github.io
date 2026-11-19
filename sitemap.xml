@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://anamariabrad.ro/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/"/>
   </url>
@@ -305,5 +305,17 @@
     <lastmod>2026-11-19</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/coaching-adolescenti.html"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/pentru-adulti.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/pentru-adulti.html"/>
+  </url>
+  <url>
+    <loc>https://anamariabrad.ro/workshopuri.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://anamariabrad.ro/workshopuri.html"/>
   </url>
 </urlset>
